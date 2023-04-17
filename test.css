@@ -16,17 +16,103 @@ header {
 
 main {
     display: flex;
-    
+
 }
 
-main > article {
-    width: 70vw;
+main>article {
+    width: 75vw;
     margin: 10%;
     margin-top: 5%;
     border: solid;
 }
 
-main > aside {
-    width: 29vw;
+main>aside {
+    width: 25vw;
     border: solid;
+    margin: 5%;
+    padding: 2%;
+}
+
+main>aside>img {
+    height: 30vh;
+    width: auto;
+}
+
+/* https://believemy.com/r/creer-un-bouton-anime-arc-en-ciel
+ */
+
+button {
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border: 0px;
+    background: transparent;
+    position: relative;
+    transition: all .2s;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0px -0px 0px 0px rgba(143, 64, 248, .5), 0px 0px 0px 0px rgba(39, 200, 255, .5);
+}
+
+button::after {
+    content: '';
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-image: linear-gradient(225deg, #27d86c 0%, #26caf8 50%, #c625d0 100%);
+    z-index: -1;
+    transition: all .5s;
+}
+
+button:hover::after {
+    transform: rotate(150deg);
+}
+
+button:hover {
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0px rgba(143, 64, 248, .25), -10px 10px 25px 0px rgba(39, 200, 255, .25);
+}
+
+/*
+https://believemy.com/r/creer-un-bouton-avec-un-effet-de-remplissage
+*/
+
+a {
+    width: 20%;
+    height: 6vh;
+    font-size: 1.3rem;
+    font-family: arial, sans-serif;
+    font-weight: 700;
+    position: relative;
+    color: black;
+    z-index: 0;
+    border: 1px solid #00FFFF;
+    background: whitesmoke;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00FFFF;
+    border-radius: 50% 50% 0% 0%;
+    z-index: -1;
+    transition: all .5s;
+}
+
+a:hover::before {
+    top: 0px;
+    border-radius: 0;
 }

@@ -24,3 +24,18 @@
 > un title h1 ou h2
 > un ou des article contenant (un text / image / integration pdf)
 > Un aside avec un image qui change (faut changer ca), un flash info et la possibilité de changer de langue
+
+
+
+# Page Acceuil
+
+## Actuel
+    + Introduction (bien faite je trouve)
+    + Devis (formulaire)
+    + Actualités
+    + 60 ans
+    + Emplacement + coordonnées
+    + Dans notre domaines
+    + Etudes 
+    + Contacte
+    + Footer
