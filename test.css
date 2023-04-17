@@ -1,0 +1,32 @@
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://img.freepik.com/vecteurs-libre/belle-bleu-fond-aquarelle_1055-621.jpg?w=826&t=st=1681724231~exp=1681724831~hmac=92f1636832709f927a2211456ab355f1740ec6478c99344784f2ac8106c2c70a);
+    margin: 0%;
+    padding: 0%;
+    text-align: center;
+}
+
+header {
+    margin: 0%;
+    height: 5vh;
+    width: 100vw;
+    background-color: white;
+}
+
+main {
+    display: flex;
+    
+}
+
+main > article {
+    width: 70vw;
+    margin: 10%;
+    margin-top: 5%;
+    border: solid;
+}
+
+main > aside {
+    width: 29vw;
+    border: solid;
+}
