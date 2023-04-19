@@ -13,7 +13,7 @@
     + Rendre la partie recherche plus facile d'utilisation
     + Dans (GALERIE/PHOTO) les mettres tous de la meme taille
     + Dans Projet il un probleme avec les listes
-    + page d'acceuil le header au dessus du header n'a aucun sens
+    + page d'acceuil le header au dessus du header  n'a aucun sens (il faut le supprimer), prendre sa couleur la mettre pour la barre de navigation.
      
 ## COULEUR
     + #e2d810 (jaune) / #d9138a (magenta) / #12a4d9 (cyan) / #322e2f (noir)
@@ -38,4 +38,14 @@
     + Dans notre domaines
     + Etudes 
     + Contacte
+    + Footer
+
+## IDEE
+    + Intro (logique)
+    + Devis (Le plus important j'imagine) // supprimable non ?
+    + Actualite
+    + 60 ans
+    + Dans notre domaines
+    + Etudes
+    + Emplacement + coordonnées (il fait bcp pensez a un truc qu'on trouve en bas de page, je trouve ca bizzard qu'il y ai des trucs apres)
     + Footer
