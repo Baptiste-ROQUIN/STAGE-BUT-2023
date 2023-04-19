@@ -7,13 +7,13 @@
     + Theme sombre / ou template de base moins clair
     + Separer la couleur du menu et celui de la page ?
     + Trouver une bonne place pour les resaux sociaux
+    + menu avec 3 barres ?
 
 ## Choses a modifier
     + Dans tout les pages, le point pluviometrie a droite fait tout bouger tout le temps
-    + Rendre la partie recherche plus facile d'utilisation
     + Dans (GALERIE/PHOTO) les mettres tous de la meme taille
     + Dans Projet il un probleme avec les listes
-    + page d'acceuil le header au dessus du header  n'a aucun sens (il faut le supprimer), prendre sa couleur la mettre pour la barre de navigation.
+    + page d'acceuil le header au dessus du header bizarre, prendre sa couleur la mettre pour la barre de navigation ?
      
 ## COULEUR
     + #e2d810 (jaune) / #d9138a (magenta) / #12a4d9 (cyan) / #322e2f (noir)
@@ -43,7 +43,7 @@
 ## IDEE
     + Intro (logique)
     + Devis (Le plus important j'imagine) // supprimable non ?
-    + Actualite
+    + Actualite 
     + 60 ans
     + Dans notre domaines
     + Etudes
