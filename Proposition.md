@@ -8,6 +8,7 @@
     + Separer la couleur du menu et celui de la page ?
     + Trouver une bonne place pour les resaux sociaux
     + menu avec 3 barres ?
+    + page d'acceuil (3 truc de base + banbniere)
 
 ## Choses a modifier
     + Dans tout les pages, le point pluviometrie a droite fait tout bouger tout le temps
