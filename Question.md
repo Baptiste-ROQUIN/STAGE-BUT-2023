@@ -10,3 +10,7 @@ Non
 
 ## a quoi sert la recherche ?
 A rien c'est un truc copier
+
+# Partie2
+
+## On laisse partenaire / Glorious Algeria ?

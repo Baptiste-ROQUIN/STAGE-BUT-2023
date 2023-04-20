@@ -38,7 +38,7 @@ nav.menu_static {
     top: 0;
 }
 
-nav.menu_static>a.les_liens {
+/* nav.menu_static>a.les_liens {
     font-size: 1.4em;
     margin-left: 2%;
     margin-top: auto;
@@ -47,7 +47,7 @@ nav.menu_static>a.les_liens {
 
 nav.menu_static>a.les_liens:hover {
     background-color: yellow;
-}
+} */
 
 
 nav.menu_static>a>img {
@@ -64,17 +64,31 @@ aside.bandeau {
     width: 70vw;
     background-color: red;
     position: -70vw;
-    display: block;
     margin: 0%;
     padding: 0%;
+    /* border-radius: 0% 50% 10%  0% ; */
+    position: relative;
+    left: -60%;
+    transition: 1s;
+    display: flex;
+    padding-right: 1%;
+}
+aside.bandeau:hover {
+    left: 0%;
+
+}
+
+aside.bandeau>div.text_cote {
+    transform: rotate(90deg); -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -khtml-transform: rotate(90deg); -ms-transform: rotate(90deg);
+    background-color: blue;
 }
 
 
 main {
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: url(https://latelier.bricoprive.com/wp-content/uploads/2022/06/Sans-titre-15-1024x1024.jpg); */
-    background: linear-gradient(rgba(94, 177, 207), rgb(28, 28, 175));
+    background-image: url(https://img1.wallspic.com/attachments/originals/7/4/0/7/5/157047-eau_de_lesprit_saint-eau_recuperee-eau-de_leau_potable-majik_water_llc-3200x2048.jpg);
+    /* background: linear-gradient(rgba(94, 177, 207), rgb(28, 28, 175)); */
     height: 100vh;
     padding-top: 3%;
     margin-top: 0%;
@@ -128,7 +142,7 @@ a.bouton {
     color: rgba(168, 168, 168);
     z-index: 0;
     border: 2px solid black;
-    background: rgba(245, 245, 245, 0.2);
+    backdrop-filter: blur(10px); /* ne marche pas sur les fond de couleur uni*/
     overflow: hidden;
     text-decoration: none;
     display: flex;
@@ -146,7 +160,7 @@ a.bouton::before {
     background: #315bb8;
     border-radius: 50% 50% 0% 0%;
     z-index: -1;
-    transition: all .5s;
+    transition: all .7s;
 }
 
 a.bouton:hover::before {
@@ -157,29 +171,35 @@ a.bouton:hover::before {
 /* ------------------------------------------- test ------------------------------------------- */
 .menu {
     display: inline-block;
+    width: 80%;
 }
 
 .menu>li {
     float: left;
-    color: #e298e1;
-    width: 140px;
-    height: 40px;
+    color: black;
+    height: 100%;
+    width: 10%;
     line-height: 40px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgb(168, 168, 168);
     cursor: pointer;
-    font-size: 17px;
+    /* font-size: 1.4em; */
+    /* margin-left: 2%; */
+    margin-top: auto;
+    margin-bottom: auto
 }
 
 .sub-menu {
+    padding: 0%;
     transform: scale(0);
     transform-origin: top center;
     transition: all 300ms ease-in-out;
 }
 
 .sub-menu li {
+    width: 100%;
     font-size: 14px;
     background: rgba(0, 0, 0, 0.8);
-    padding: 8px 0;
+    /* padding: 8px 0; */
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transform: scale(0);
