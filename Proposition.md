@@ -9,6 +9,7 @@
     + Trouver une bonne place pour les resaux sociaux
     + menu avec 3 barres ?
     + page d'acceuil (3 truc de base + banbniere)
+    + Faire un footer comme dans rust https://rust.facepunch.com
 
 ## Choses a modifier
     + Dans tout les pages, le point pluviometrie a droite fait tout bouger tout le temps
@@ -25,28 +26,3 @@
 > un title h1 ou h2
 > un ou des article contenant (un text / image / integration pdf)
 > Un aside avec un image qui change (faut changer ca), un flash info et la possibilité de changer de langue
-
-
-
-# Page Acceuil
-
-## Actuel
-    + Introduction (bien faite je trouve)
-    + Devis (formulaire)
-    + Actualités
-    + 60 ans
-    + Emplacement + coordonnées
-    + Dans notre domaines
-    + Etudes 
-    + Contacte
-    + Footer
-
-## IDEE
-    + Intro (logique)
-    + Devis (Le plus important j'imagine) // supprimable non ?
-    + Actualite 
-    + 60 ans
-    + Dans notre domaines
-    + Etudes
-    + Emplacement + coordonnées (il fait bcp pensez a un truc qu'on trouve en bas de page, je trouve ca bizzard qu'il y ai des trucs apres)
-    + Footer
