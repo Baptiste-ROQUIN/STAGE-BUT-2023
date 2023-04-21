@@ -20,7 +20,10 @@
 ## COULEUR
     + #e2d810 (jaune) / #d9138a (magenta) / #12a4d9 (cyan) / #322e2f (noir)
 
-
+## BONNE IDEE
+    - menu = ACCUEIL / L'AGENCE / CLIENT / ACTIVITES / (CARTOGRAPHIE) / CONTACTER NOUS / *choix langue*
+    - placer BLIBIOGRAPHIE et GALERIE autre part
+    
 ## Observation
 > Les sous parties possedes toute la meme disposition
 > un title h1 ou h2
