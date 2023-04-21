@@ -2,35 +2,22 @@ body {
     background-repeat: no-repeat;
     background-size: 200%;
     /*background-image: url(https://img.freepik.com/vecteurs-libre/belle-bleu-fond-aquarelle_1055-621.jpg?w=826&t=st=1681724231~exp=1681724831~hmac=92f1636832709f927a2211456ab355f1740ec6478c99344784f2ac8106c2c70a); */
-    margin: 0%;
-    padding: 0%;
     text-align: center;
-    font-size: 0.8em
+    font-size: 0.8em;
 }
 
 header {
-    margin: 0%;
-    height: 3vh;
-    width: 100vw;
     background-color: rgb(29, 29, 29);
     display: flex;
     justify-content: space-around;
 }
 
 header>section {
-    margin: auto;
     display: flex;
     justify-content: space-around;
-    width: 10%;
-}
-
-nav {
-    margin: 0%;
 }
 
 nav.menu_static {
-    height: 7vh;
-    width: 100vw;
     background-color: rgb(168, 168, 168);
     display: flex;
     justify-content: center;
@@ -38,52 +25,30 @@ nav.menu_static {
     top: 0;
 }
 
-/* nav.menu_static>a.les_liens {
-    font-size: 1.4em;
-    margin-left: 2%;
-    margin-top: auto;
-    margin-bottom: auto
-}
-
-nav.menu_static>a.les_liens:hover {
-    background-color: yellow;
-} */
-
-
-nav.menu_static>a>img {
-    height: 90%;
-    width: auto;
-}
-
 nav.menu_static>a>img:hover {
     background-color: transparent;
 }
 
-
 aside.bandeau {
-    width: 70vw;
     background-color: red;
-    position: -70vw;
-    margin: 0%;
-    padding: 0%;
-    /* border-radius: 0% 50% 10%  0% ; */
     position: absolute;
-    left: -68%;
+    left: -70%;
     transition: 1s;
     display: flex;
-    padding-right: 1%;
 }
+
 aside.bandeau:hover {
     left: 0%;
 }
 
 aside.bandeau>div.text_cote {
-    transform: rotate(90deg); -moz-transform: rotate(90deg); -webkit-transform: rotate(90deg); -khtml-transform: rotate(90deg); -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     background-color: blue;
-    margin-left: 2%;
-    /* height: 112%; */
 }
-
 
 main {
     background-repeat: no-repeat;
@@ -91,9 +56,6 @@ main {
     background-image: url(https://img1.wallspic.com/attachments/originals/7/4/0/7/5/157047-eau_de_lesprit_saint-eau_recuperee-eau-de_leau_potable-majik_water_llc-3200x2048.jpg);
     /* background: linear-gradient(rgba(94, 177, 207), rgb(28, 28, 175)); */
     /* background-color: yellow; */
-    height: 100vh;
-    padding-top: 3%;
-    margin-top: 0%;
 }
 
 main>nav {
@@ -101,17 +63,11 @@ main>nav {
 }
 
 main>nav.bouton_eau {
-    width: 60vw;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 main>div.carre_gris {
     border: 2px solid black;
-    margin: auto;
-    width: 60vw;
-    height: auto;
     color: rgba(168, 168, 168);
 }
 
@@ -119,24 +75,8 @@ main>div.carre_gris>h1 {
     font-size: 2rem;
 }
 
-
-
-
-/* main>div {
-    background-color: red;
-    height: 10%;
-    width: 100%;
-} */
-
-
-
-
 a.bouton {
-    width: 8vw;
-    height: 13vh;
-    margin-top: 15vh;
     border-radius: 50%;
-
     font-size: 1.3rem;
     font-family: arial, sans-serif;
     font-weight: 700;
@@ -144,7 +84,8 @@ a.bouton {
     color: rgba(168, 168, 168);
     z-index: 0;
     border: 2px solid black;
-    backdrop-filter: blur(10px); /* ne marche pas sur les fond de couleur uni*/
+    backdrop-filter: blur(10px);
+    /* ne marche pas sur les fond de couleur uni*/
     overflow: hidden;
     text-decoration: none;
     display: flex;
@@ -157,8 +98,6 @@ a.bouton::before {
     position: absolute;
     top: 15vh;
     left: 0;
-    width: 100%;
-    height: 100%;
     background: #315bb8;
     border-radius: 50% 50% 0% 0%;
     z-index: -1;
@@ -171,43 +110,32 @@ a.bouton:hover::before {
 }
 
 a.bouton>img {
-    width: 60%;
-    height: 60%;
-
+    transition: .7s;
 }
 
-/* ------------------------------------------- test ------------------------------------------- */
 .menu {
     display: inline-block;
-    width: 80%;
 }
 
 .menu>li {
     float: left;
     color: black;
-    height: 100%;
-    width: 10%;
     line-height: 40px;
     background: rgb(168, 168, 168);
     cursor: pointer;
     /* font-size: 1.4em; */
     /* margin-left: 2%; */
-    margin-top: auto;
-    margin-bottom: auto
 }
 
 .sub-menu {
-    padding: 0%;
     transform: scale(0);
     transform-origin: top center;
     transition: all 300ms ease-in-out;
 }
 
 .sub-menu li {
-    width: 100%;
     font-size: 14px;
     background: rgba(0, 0, 0, 0.8);
-    /* padding: 8px 0; */
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     transform: scale(0);
@@ -234,3 +162,54 @@ a.bouton>img {
 ul {
     list-style: none;
 }
+
+/* test*/
+@keyframes slidein {
+    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes slidein2 {
+    from {
+        left: 99%;
+    }
+
+    to {
+        left: 0%;
+    }
+}
+
+img.wave, img.wave2  {
+    width: 100vw;
+    left: 0%;
+    top: 100vh;
+    position: absolute;
+    display: block;
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    animation-timing-function: linear;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+img.wave {
+    animation-name: slidein;
+}
+img.wave2 {
+    animation-name: slidein2;
+}
+
+
+
+
+
+
+@media screen and (max-width: 450px) {}
