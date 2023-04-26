@@ -21,10 +21,7 @@
 
 
 ## Observation
-> Les sous parties possedes toute la meme disposition
-> un title h1 ou h2
-> un ou des article contenant (un text / image / integration pdf)
-> Un aside avec un image qui change (faut changer ca), un flash info et la possibilité de changer de langue
+    Il est impossible de mettre le menu deroulant avec un hover, car il sera presque impossible de l'adapter pour le mobile.
 
 
 
