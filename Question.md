@@ -14,3 +14,7 @@ A rien c'est un truc copier
 # Partie2
 
 ## On laisse partenaire / Glorious Algeria ?
+
+## Je peux deplacer pluviometrie dans la partie 'NOS MISSIONS' ?
+
+## Protocole de quoi ?
