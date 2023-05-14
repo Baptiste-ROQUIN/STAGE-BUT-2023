@@ -9,6 +9,7 @@
     + Trouver une bonne place pour les resaux sociaux
     + menu avec 3 barres ?
     + page d'acceuil (3 truc de base + banbniere)
+    + Faire un footer comme dans rust https://rust.facepunch.com
 
 ## Choses a modifier
     + Dans tout les pages, le point pluviometrie a droite fait tout bouger tout le temps
@@ -19,7 +20,10 @@
 ## COULEUR
     + #e2d810 (jaune) / #d9138a (magenta) / #12a4d9 (cyan) / #322e2f (noir)
 
-
+## BONNE IDEE
+    - menu = ACCUEIL / L'AGENCE / CLIENT / ACTIVITES / (CARTOGRAPHIE) / CONTACTER NOUS / *choix langue*
+    - placer BLIBIOGRAPHIE et GALERIE autre part
+    
 ## Observation
     Il est impossible de mettre le menu deroulant avec un hover, car il sera presque impossible de l'adapter pour le mobile.
 
@@ -47,3 +51,9 @@
     + Etudes
     + Emplacement + coordonnées (il fait bcp pensez a un truc qu'on trouve en bas de page, je trouve ca bizzard qu'il y ai des trucs apres)
     + Footer
+
+> Les sous parties possedes toute la meme disposition
+> un title h1 ou h2
+> un ou des article contenant (un text / image / integration pdf)
+> Un aside avec un image qui change (faut changer ca), un flash info et la possibilité de changer de langue
+
