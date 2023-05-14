@@ -55,11 +55,15 @@ ul.menu {
 header {
     background-color: #222222;
     display: flex;
-
+    width: 100vw;
+    height: 7vh;
+    margin: 0%;
+    padding: 0%;
 }
 
 nav {
     position: sticky;
+    top: 0px;
 }
 
 a {

@@ -1,12 +1,13 @@
-@import url("./menu.css");
+/* @import url("./menu.css"); */
 
 body {
-
-
+    margin: 0%;
+    padding: 0%;
     text-align: center;
     font-size: 0.8em;
-    padding: 0%;
 }
+
+/* PAGE D'INTRO */
 
 section.page_intro {
     color: white;
@@ -26,8 +27,15 @@ section.page_intro>img#presentation_logo {
 
 section.page_intro>img#presentation_descendre {
     margin: auto;
-    position: relative;
+    width: 20vw;
+    height: auto;
+    position: absolute;
     bottom: 0;
+    left: 40vw;
+}
+
+section.page_intro>img#presentation_descendre:hover {
+    cursor: pointer;
 }
 
 section.page_intro>h1 {
@@ -46,6 +54,13 @@ div.barre_jaune {
 section.page_intro>h2 {
     width: 50vw;
     margin: 2vh auto ;
+}
+
+/* MAIN */
+
+main {
+    width: 100vw;
+    height: 100vh;
 }
 
 a.bouton_services {
@@ -81,12 +96,6 @@ a.bouton_services:hover::before {
     top: 0px;
     border-radius: 0;
 }
-
-header>a>img {
-    height: 100%;
-    width: auto;
-}
-
 
 /* test*/
 @keyframes slidein {
