@@ -1,81 +1,69 @@
+/* @import url("./menu.css"); */
+
 body {
-    background-repeat: no-repeat;
-    background-size: 200%;
-    /*background-image: url(https://img.freepik.com/vecteurs-libre/belle-bleu-fond-aquarelle_1055-621.jpg?w=826&t=st=1681724231~exp=1681724831~hmac=92f1636832709f927a2211456ab355f1740ec6478c99344784f2ac8106c2c70a); */
+    margin: 0%;
+    padding: 0%;
     text-align: center;
     font-size: 0.8em;
 }
 
-header {
-    background-color: rgb(29, 29, 29);
-    display: flex;
-    justify-content: space-around;
+/* PAGE D'INTRO */
+
+section.page_intro {
+    color: white;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-image: url(../image/accueil/riviere_fond.jpg);
 }
 
-header>section {
-    display: flex;
-    justify-content: space-around;
+section.page_intro>img#presentation_logo {
+    margin: 5vh auto;
+    width: 22vw;
+    height: auto;
 }
 
-nav.menu_static {
-    background-color: rgb(168, 168, 168);
-    display: flex;
-    justify-content: center;
-    position: sticky;
-    top: 0;
-}
-
-nav.menu_static>a>img:hover {
-    background-color: transparent;
-}
-
-aside.bandeau {
-    background-color: red;
+section.page_intro>img#presentation_descendre {
+    margin: auto;
+    width: 20vw;
+    height: auto;
     position: absolute;
-    left: -70%;
-    transition: 1s;
-    display: flex;
+    bottom: 0;
+    left: 40vw;
 }
 
-aside.bandeau:hover {
-    left: 0%;
+section.page_intro>img#presentation_descendre:hover {
+    cursor: pointer;
 }
 
-aside.bandeau>div.text_cote {
-    transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -khtml-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    background-color: blue;
+section.page_intro>h1 {
+    font-size: 4em;
+    width: 40vw;
+    margin: 2vh auto;
 }
+
+div.barre_jaune {
+    width: 50vw;
+    height: 0.5vh;
+    background-color: #FCCC10;
+    margin: 3vh auto;
+}
+
+section.page_intro>h2 {
+    width: 50vw;
+    margin: 2vh auto ;
+}
+
+/* MAIN */
 
 main {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(https://img1.wallspic.com/attachments/originals/7/4/0/7/5/157047-eau_de_lesprit_saint-eau_recuperee-eau-de_leau_potable-majik_water_llc-3200x2048.jpg);
-    /* background: linear-gradient(rgba(94, 177, 207), rgb(28, 28, 175)); */
-    /* background-color: yellow; */
+    width: 100vw;
+    height: 100vh;
 }
 
-main>nav {
-    display: flex;
-}
-
-main>nav.bouton_eau {
-    justify-content: space-between;
-}
-
-main>div.carre_gris {
-    border: 2px solid black;
-    color: rgba(168, 168, 168);
-}
-
-main>div.carre_gris>h1 {
-    font-size: 2rem;
-}
-
-a.bouton {
+a.bouton_services {
     border-radius: 50%;
     font-size: 1.3rem;
     font-family: arial, sans-serif;
@@ -93,7 +81,7 @@ a.bouton {
     justify-content: center;
 }
 
-a.bouton::before {
+a.bouton_services::before {
     content: '';
     position: absolute;
     top: 15vh;
@@ -104,63 +92,9 @@ a.bouton::before {
     transition: all .7s;
 }
 
-a.bouton:hover::before {
+a.bouton_services:hover::before {
     top: 0px;
     border-radius: 0;
-}
-
-a.bouton>img {
-    transition: .7s;
-}
-
-.menu {
-    display: inline-block;
-}
-
-.menu>li {
-    float: left;
-    color: black;
-    line-height: 40px;
-    background: rgb(168, 168, 168);
-    cursor: pointer;
-    /* font-size: 1.4em; */
-    /* margin-left: 2%; */
-}
-
-.sub-menu {
-    transform: scale(0);
-    transform-origin: top center;
-    transition: all 300ms ease-in-out;
-}
-
-.sub-menu li {
-    font-size: 14px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    transform: scale(0);
-    transform-origin: top center;
-    transition: all 300ms ease-in-out;
-}
-
-.sub-menu li:last-child {
-    border-bottom: 0;
-}
-
-.sub-menu li:hover {
-    background: black;
-}
-
-.menu>li:hover .sub-menu li {
-    transform: scale(1);
-}
-
-.menu>li:hover .sub-menu {
-    transform: scale(1);
-}
-
-ul {
-    list-style: none;
 }
 
 /* test*/
@@ -183,30 +117,6 @@ ul {
         left: 0%;
     }
 }
-
-img.wave, img.wave2  {
-    width: 100vw;
-    left: 0%;
-    top: 100vh;
-    position: absolute;
-    display: block;
-    transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -khtml-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    animation-timing-function: linear;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-}
-
-img.wave {
-    animation-name: slidein;
-}
-img.wave2 {
-    animation-name: slidein2;
-}
-
 
 
 
