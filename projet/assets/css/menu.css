@@ -28,10 +28,9 @@ nav.menu_static {
 
 
 header>section.langue {
-    width: 7%;
+    width: 8%;
     height: 100%;
     margin: 1vh 1vw;
-
 }
 
 header>section.langue>a>img {
@@ -57,7 +56,7 @@ header>section.langue>a>img {
         padding: 0%;
         display: inline-block;
         list-style: none;
-        width: 90%;
+        width: 75%;
         margin: auto;
     }
     
