@@ -4,7 +4,7 @@ body {
     margin: 0%;
     padding: 0%;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 /* PAGE D'INTRO */
@@ -64,15 +64,19 @@ main {
     height: 100vh;
 }
 
+.titre {
+    margin: 5vh auto;
+}
+
 .titre>h1 {
     font-size: 3.5em;
-    margin-top: 7vh;
+    margin-bottom: 2vh;
 }
 .titre>.barre_jaune_titre {
     width: 10vw;
     height: 0.2vh;
     background-color: #FCCC10;
-    margin: 1vh auto;
+    margin: auto;
 }
 
 /* NOS MISSIONS */
@@ -113,28 +117,44 @@ section.nos_missions>div>a {
 
 
 .decoration_mission {
-    display: flex;
-    flex-direction: row;
-}
-.decoration_mission>img {
-    width: 50%;
+    width: 100vw;
+    z-index: -1;
+
+    /* Pas nécessaire mais evite qu'il y ai un petit bout de blanc inutile*/
     position: relative;
     top: -1px;
+    
 }
 
 /* Services */
 
 .services {
     margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 89vw;
 }
 
-.presentation_services {
-    width: 20vw;
+div.presentation_services {
+    width: 15vw;
+    padding: 1vh;
+    margin: 1vw;
     text-align: left;
-    border: solid ;
-    box-shadow: 1px 1px 1px 1px black;;
+    border: 10px solid white;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
 
 }
+
+div.presentation_services:hover {
+    background-color: #B0C4DE;
+    color: white;
+}
+
+.presentation_services>img {
+    width:35%;
+    height: 45%;
+}
+
 
 
 
@@ -213,4 +233,8 @@ a.bouton_services:hover::before {
 
 
 
-@media screen and (max-width: 450px) {}
+@media screen and (max-width: 850px) {
+    section.nos_missions>p {
+        font-size: 1.2em;
+    }
+}
