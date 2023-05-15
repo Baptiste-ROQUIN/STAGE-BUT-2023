@@ -13,9 +13,9 @@ section.page_intro {
     color: white;
     text-align: center;
     width: 100vw;
-    height: 100vh;
+    height: 93vh;
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background-size: 100vw 93vh;
     background-image: url(../image/accueil/riviere_fond.jpg);
 }
 
@@ -62,6 +62,35 @@ main {
     width: 100vw;
     height: 100vh;
 }
+
+/* NOS MISSIONS */
+
+main>section.nos_missions {
+    background: linear-gradient(white, #B0C4DE);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 a.bouton_services {
     border-radius: 50%;
