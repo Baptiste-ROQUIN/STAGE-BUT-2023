@@ -13,14 +13,17 @@ section.page_intro {
     color: white;
     text-align: center;
     width: 100vw;
-    height: 93vh;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+
     background-repeat: no-repeat;
-    background-size: 100vw 93vh;
+    background-size: 100vw 100vh;
     background-image: url(../image/accueil/page_intro/riviere_fond.jpg);
 }
 
 section.page_intro>img#presentation_logo {
-    margin: 3vh auto;
+    margin: 7vh auto 2vh auto;
     width: 18vw;
     height: auto;
 }
@@ -61,6 +64,8 @@ section.page_intro>h2 {
 
 main {
     width: 100vw;
+    position: relative;
+    top: 100vh;
 }
 
 .titre {
