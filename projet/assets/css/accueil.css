@@ -61,7 +61,6 @@ section.page_intro>h2 {
 
 main {
     width: 100vw;
-    height: 100vh;
 }
 
 .titre {
@@ -83,7 +82,7 @@ main {
 
 main>section.nos_missions {
     background: linear-gradient(white, #B0C4DE);
-    height: 30vh;
+    height: 35vh;
     display: flex;
 }
 
@@ -135,17 +134,21 @@ section.nos_missions>div>a {
     width: 89vw;
 }
 
-div.presentation_services {
+.presentation_services {
     width: 15vw;
     padding: 1vh;
     margin: 1vw;
     text-align: left;
-    border: 10px solid white;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+    border: 3px solid white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.5s;
 
+    /* relatif au a*/
+    text-decoration: none;
+    color: black;
 }
 
-div.presentation_services:hover {
+.presentation_services:hover {
     background-color: #B0C4DE;
     color: white;
 }
@@ -156,9 +159,47 @@ div.presentation_services:hover {
 }
 
 
+/* Actualites */
 
+.actualites {
+    background-color: #EEEEFF;
+}
 
+.actualites>.titre {
+    margin-top: -2px;
+}
 
+.article {
+    width: 20vw;
+    padding: 1vw;
+    background-color: #B0C4DE;
+    border: #B0C4DE solid;
+    border-radius: 25px;
+}
+
+.article>p {
+    text-align: left;
+}
+
+.article>a {
+    width: 55vw;
+    color: #B0C4DE;
+    background-color: white;
+    border: white solid;
+    border-radius: 25px;
+
+}
+
+#en_haut {
+    margin-top: 5vh;
+}
+#en_bas {
+    transform : rotate(180deg);
+}
+
+.vague {
+    width: 100vw;
+}
 
 
 
