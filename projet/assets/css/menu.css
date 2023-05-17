@@ -9,13 +9,14 @@ header {
     justify-content: space-between;
     color: white;
     z-index: 1;
-   
+    transition: 1s;
 }
 
 header>a>img {
     width: auto;
     height: 95%;
-    visibility: hidden;
+    visibility:hidden;
+    transition: 0.3s;
 }
 
 a {
@@ -31,7 +32,7 @@ nav.menu_static {
 header>section.langue {
     width: 8%;
     height: 100%;
-    margin: 1vh 1vw;
+    margin: 1.5vh 1vw;
 }
 
 header>section.langue>a>img {
@@ -47,15 +48,13 @@ header>section.langue>a>img {
 
 @media screen and (min-width: 550px) {
     ul.menu {
-        padding: 0%;
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
         list-style: none;
         width: 75vw;
         height: 7vh;
-        margin: auto;
-
+        margin: 1.5vh auto;
     }
     
     .menu>li {
@@ -64,10 +63,14 @@ header>section.langue>a>img {
         cursor: pointer;
         height: 100%;
         font-size: 1.2em;
+        transition: 1s;
+        color: black;
     }
 
     .menu>li>a {
         text-decoration: none;
+        transition: 1s;
+        color: black;
     }
     
     .sub-menu {

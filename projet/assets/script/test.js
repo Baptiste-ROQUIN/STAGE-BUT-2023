@@ -8,21 +8,36 @@ function scrollPageBelowPresentation(){
 document.addEventListener('DOMContentLoaded', function() {
     console.log('HTML prêt !');
    
-    
-    console.log(liens_menu)
 
-
-    
-    
 });
 
 window.onscroll = function(){
     const header = document.getElementById("header_changeant");
-    const liens_menu = document.querySelector(".menu>li>a");
-    if (scrollY > 100)
+    const li_menu = document.querySelectorAll(".menu>li");
+    const liens_menu = document.querySelectorAll(".menu>li>a");
+    const image = document.getElementById("logo_ANRH")
+    console.log(image)
+    
+    if (scrollY > 100) {
         header.style.backgroundColor = "black";
-        liens_menu.style.color = "white";
-    if ((scrollY <= 100))
+        for (const li of li_menu) {
+            li.style.color = "white";
+        }
+        for (const lien of liens_menu) {
+            lien.style.color = "white";
+        }
+        image.style.visibility = "visible";
+    }
+
+    if ((scrollY <= 100)){
         header.style.backgroundColor = "transparent";
-        liens_menu.style.color = "black"
+        for (const li of li_menu) {
+            li.style.color = "black";
+        }
+        for (const lien of liens_menu) {
+            lien.style.color = "black";
+        }
+        image.style.visibility = "hidden";
+    }
+
 }
