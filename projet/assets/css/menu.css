@@ -109,3 +109,23 @@ header>section.langue>a>img {
     }
     
 }
+
+.menu_navigation {
+    position: fixed;
+    left: 1vw;
+    top: 40vh;
+    z-index: 1;
+}
+
+#scrollUp
+{
+    position: fixed;
+    bottom : 2vh;
+    right: 2vw;
+    opacity: 0.7;
+    cursor: pointer;
+    z-index: 1;
+}
+#scrollUp>img {
+    width: 3.5vw;
+}

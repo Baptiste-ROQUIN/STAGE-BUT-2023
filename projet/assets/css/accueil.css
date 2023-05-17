@@ -241,16 +241,20 @@ section.nos_missions>div>a {
 
 .bouton_info {
     width: 15vw;
-    height: 5vh;
     background-color: #B0C4DE;
     border-radius: 25px;
+    cursor: pointer;
 }
 
 .bouton_info:hover {
     background-color: rgba(50, 46, 47, 0.8);
 }
 
-
+.bouton_info>p {
+    display: none;
+    text-align: left;
+    margin-left: 10%;
+}
 
 
 
