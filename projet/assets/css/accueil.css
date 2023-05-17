@@ -14,7 +14,6 @@ section.page_intro {
     text-align: center;
     width: 100vw;
     height: 100vh;
-    position: absolute;
     top: 0px;
 
     background-repeat: no-repeat;
@@ -64,8 +63,6 @@ section.page_intro>h2 {
 
 main {
     width: 100vw;
-    position: relative;
-    top: 100vh;
 }
 
 .titre {
@@ -75,6 +72,7 @@ main {
 .titre>h1 {
     font-size: 3.5em;
     margin-bottom: 2vh;
+    margin-top: 0vh ;
 }
 .titre>.barre_jaune_titre {
     width: 10vw;
@@ -171,15 +169,26 @@ section.nos_missions>div>a {
 }
 
 .actualites>.titre {
-    margin-top: -2px;
+    margin-top: 0vh;
+}
+
+.les_articles {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
 .article {
-    width: 20vw;
+    width: 17vw;
     padding: 1vw;
     background-color: #B0C4DE;
     border: #B0C4DE solid;
     border-radius: 25px;
+    margin: 2vh 2vw;
+}
+
+.article>img {
+    width: 100%;
 }
 
 .article>p {
@@ -187,16 +196,23 @@ section.nos_missions>div>a {
 }
 
 .article>a {
-    width: 55vw;
+    display: flow-root;
+    height: 4vh;
+    font-size: 3vh;
     color: #B0C4DE;
     background-color: white;
     border: white solid;
     border-radius: 25px;
+    transition: 1s;
+}
 
+.article>a:hover {
+    font-size: 3.2vh;
 }
 
 #en_haut {
     margin-top: 5vh;
+    margin-bottom: -5px;
 }
 #en_bas {
     transform : rotate(180deg);
@@ -207,8 +223,32 @@ section.nos_missions>div>a {
 }
 
 
+/* DIRECTIONS */
 
+.directions>.directions_image {
+    height: 50vh;
+    width: 90vw;
+    background-color: rgba(50, 46, 47, 0.8);
 
+    margin: 2vh auto 10vh auto;
+}
+
+.les_boutons_info {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.bouton_info {
+    width: 15vw;
+    height: 5vh;
+    background-color: #B0C4DE;
+    border-radius: 25px;
+}
+
+.bouton_info:hover {
+    background-color: rgba(50, 46, 47, 0.8);
+}
 
 
 
@@ -277,10 +317,28 @@ a.bouton_services:hover::before {
 
 
 
-
-
-@media screen and (max-width: 850px) {
-    section.nos_missions>p {
-        font-size: 1.2em;
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 1050px) {
+    body {
+        font-size: 0.7em;
+    }
+}
+@media screen and (max-width: 870px) {
+    body {
+        font-size: 0.6em;
+    }
+}
+@media screen and (max-width: 750px) {
+    body {
+        font-size: 0.5em;
+    }
+}
+@media screen and (max-width: 550px) {
+    body {
+        font-size: 0.4em;
     }
 }
