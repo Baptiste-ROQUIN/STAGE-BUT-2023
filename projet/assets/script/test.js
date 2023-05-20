@@ -64,6 +64,9 @@ window.onscroll = function(){
     const btnScrollTop = document.getElementById('scrollUp');
     if (scrollY >= innerHeight*0.90) {  // Quand on est à 200pixels du haut de page,
         btnScrollTop.style.right = "10px"; // Replace à 10pixels de la droite l'image
+        
+        // on affiche aussi le menu a gauche un fois descendu
+
     } else { 
         btnScrollTop.style.right = "-100px"; // Enlève les attributs CSS affectés par javascript
     }

@@ -1,0 +1,29 @@
+body {margin: 0px; z-index: 0;}
+.intro {
+    height: 40vh;
+    width: 100vw;
+    margin: 0%;
+    padding: 0%;
+    position: sticky;
+    top: 0px;
+    z-index: -1;
+
+}
+.intro>img {
+    width: 100vw;
+    height: 40vh;
+    margin: 0%;
+
+}
+
+main {
+    padding: 7vw;
+    height: 200vh;
+    background-color: white;
+}
+
+h1 {
+    background-color: #FCCC10;
+    border: solid #FCCC10;
+    border-radius: 25px;
+}
