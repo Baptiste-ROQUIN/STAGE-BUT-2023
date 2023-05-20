@@ -115,6 +115,19 @@ header>section.langue>a>img {
     left: 1vw;
     top: 40vh;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 0.8em;
+
+}
+
+.menu_navigation>a {
+    opacity: 0.5;
+}
+
+.menu_navigation>a:hover {
+    opacity: 1;
 }
 
 #scrollUp

@@ -62,7 +62,7 @@ window.onscroll = function(){
 
     // afficher ou non le bouton pour remonter dans la page
     const btnScrollTop = document.getElementById('scrollUp');
-    if (scrollY > innerHeight) {  // Quand on est à 200pixels du haut de page,
+    if (scrollY >= innerHeight*0.90) {  // Quand on est à 200pixels du haut de page,
         btnScrollTop.style.right = "10px"; // Replace à 10pixels de la droite l'image
     } else { 
         btnScrollTop.style.right = "-100px"; // Enlève les attributs CSS affectés par javascript

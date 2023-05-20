@@ -5,6 +5,7 @@ body {
     padding: 0%;
     text-align: center;
     font-size: 1em;
+    overflow-x: hidden;
 }
 
 /* PAGE D'INTRO */
@@ -65,8 +66,15 @@ main {
     width: 100vw;
 }
 
+main>img {
+    width: 100vw;
+}
+
+
+/* Commun */
+
 .titre {
-    margin: 5vh auto;
+    margin: auto;
 }
 
 .titre>h1 {
@@ -78,8 +86,19 @@ main {
     width: 10vw;
     height: 0.2vh;
     background-color: #FCCC10;
-    margin: auto;
+    margin: 3vh auto;
 }
+
+.fleche {
+    width: 3vw;
+    height: 5vh;
+    margin: auto;
+    cursor: pointer;
+}
+.gauche {
+    transform : rotate(-180deg);
+}
+
 
 /* NOS MISSIONS */
 
@@ -210,7 +229,7 @@ section.nos_missions>div>a {
     font-size: 3.2vh;
 }
 
-#en_haut {
+.en_haut {
     margin-top: 5vh;
     margin-bottom: -5px;
 }
@@ -227,7 +246,7 @@ section.nos_missions>div>a {
 
 .directions>.directions_image {
     height: 50vh;
-    width: 90vw;
+    width: 80vw;
     background-color: rgba(50, 46, 47, 0.8);
 
     margin: 2vh auto 10vh auto;
@@ -236,7 +255,7 @@ section.nos_missions>div>a {
 .les_boutons_info {
     display: flex;
     flex-wrap: wrap;
-
+    margin: auto 10vw;
 }
 
 .bouton_info {
@@ -244,6 +263,7 @@ section.nos_missions>div>a {
     background-color: #B0C4DE;
     border-radius: 25px;
     cursor: pointer;
+    margin: auto 2vw;
 }
 
 .bouton_info:hover {
@@ -257,6 +277,28 @@ section.nos_missions>div>a {
 }
 
 
+/* Domaine */
+.domaine {
+    background-color: #EEEEFF;
+    width: auto;
+    height: 40vh;
+}
+
+.partenaires {
+    width: 100vw;
+    height: 22vh;
+    margin: 1vh 0vw;
+    background-color: white;
+    border: 3px solid white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    justify-content: space-around;
+}
+
+.partenaires>div>a>img {
+    height: 18vh;
+    margin: 2vh 1vw;
+}
 
 
 
