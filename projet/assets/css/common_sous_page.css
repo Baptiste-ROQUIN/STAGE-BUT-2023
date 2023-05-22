@@ -1,3 +1,13 @@
+@keyframes slidein {
+    from {
+        top: -40vh;
+    }
+
+    to {
+        top: 0vh;
+    }
+}
+
 body {margin: 0px; z-index: 0;}
 .intro {
     height: 40vh;
@@ -8,6 +18,9 @@ body {margin: 0px; z-index: 0;}
     top: 0px;
     z-index: -1;
 
+    position: relative;
+    animation-duration: 2s;
+    animation-name: slidein;
 }
 .intro>img {
     width: 100vw;
@@ -21,8 +34,6 @@ main {
     height: 200vh;
     background-color: white;
 }
-
-
 
 h2 {
     background-color: #FCCC10;
