@@ -26,6 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         behavior: "smooth"
     })
 
+    const les_h2 = document.getElementsByTagName('h2')
+    console.log(les_h2)
+
 })
 
 });

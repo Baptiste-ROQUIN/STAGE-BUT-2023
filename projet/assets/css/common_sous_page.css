@@ -13,7 +13,7 @@ body {margin: 0px; z-index: 0;}
     width: 100vw;
     height: 40vh;
     margin: 0%;
-
+    filter: blur(3px);
 }
 
 main {
@@ -22,11 +22,14 @@ main {
     background-color: white;
 }
 
+
+
 h2 {
     background-color: #FCCC10;
     border: solid #FCCC10;
     border-radius: 25px;
     font-size: 5vh;
+    padding-left: 2vw;
 }
 
 div.sous_conteneur {

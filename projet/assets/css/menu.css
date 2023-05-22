@@ -120,20 +120,22 @@ header>section.langue>a>img {
     flex-direction: column;
     text-align: left;
     font-size: 0.8em;
-
+    width: 5vw;
+    
 }
 
 .menu_navigation>a {
     opacity: 0.5;
     color: #555555;
+    margin: 0.4vh 0vw;
+    cursor: pointer;
 }
 
 .menu_navigation>a:hover {
     opacity: 1;
 }
 
-#scrollUp
-{
+#scrollUp{
     position: fixed;
     bottom : 2vh;
     right: -100vw;
@@ -141,6 +143,7 @@ header>section.langue>a>img {
     cursor: pointer;
     z-index: 1;
 }
+
 #scrollUp>img {
     width: 3.5vw;
 }
