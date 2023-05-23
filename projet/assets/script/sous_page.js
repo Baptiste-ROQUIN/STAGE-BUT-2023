@@ -58,7 +58,6 @@ window.onscroll = function () {
         for (const lien of liens_menu) {
             lien.style.color = "white";
         }
-        image.style.visibility = "visible";
     }
 
     if ((scrollY <= 100)) {
@@ -69,12 +68,11 @@ window.onscroll = function () {
         for (const lien of liens_menu) {
             lien.style.color = "black";
         }
-        image.style.visibility = "hidden";
     }
 
     // afficher ou non le bouton pour remonter dans la page
     const btnScrollTop = document.getElementById('scrollUp');
-    if (scrollY >= innerHeight * 0.90) {  // Quand on est à 200pixels du haut de page,
+    if (scrollY >= innerHeight * 0.30) {  // Quand on est à 200pixels du haut de page,
         btnScrollTop.style.right = "10px"; // Replace à 10pixels de la droite l'image
 
         // on affiche aussi le menu a gauche un fois descendu

@@ -1,3 +1,11 @@
+body {
+    background-color: #EEEEFF;
+}
+
+main {
+    background-color: #EEEEFF;
+}
+
 #presentation {
     background-image: url(./../image/activites/projet/projet_image_presentation.png);
     width: 65vw;
@@ -25,14 +33,5 @@
 }
 
 .presentation_avec_image>img {
-    z-index: 1;
     width: 20vw;
-}
-
-.presentation_avec_image>.background_image{
-    position: absolute;
-    left: 73vw;
-    top: 95vh;
-    z-index: 0;
-    width: 25vw;
 }

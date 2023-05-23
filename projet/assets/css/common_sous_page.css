@@ -14,11 +14,10 @@ body {margin: 0px; z-index: 0;}
     width: 100vw;
     margin: 0%;
     padding: 0%;
-    position: sticky;
     top: 0px;
     z-index: -1;
 
-    position: relative;
+    position: sticky;
     animation-duration: 1s;
     animation-name: slidein;
 }
@@ -29,9 +28,29 @@ body {margin: 0px; z-index: 0;}
     filter: blur(3px);
 }
 
+.intro>div {
+    margin: auto;
+    position: absolute;
+    top: 40%;
+    left: 30vw;
+    width: 40vw;
+    text-align: center;
+}
+.intro>div>h1 {
+    font-size: 4vw;
+    margin: auto;
+}
+div.barre_jaune {
+    width: 20vw;
+    height: 0.5vh;
+    background-color: #FCCC10;
+    margin: 1vh auto;
+}
+
+
 main {
     padding: 7vw;
-    height: 200vh;
+    height: auto;
     background-color: white;
 }
 

@@ -16,7 +16,6 @@ header {
 header>a>img {
     width: auto;
     height: 95%;
-    visibility:hidden;
     transition: 0.3s;
 }
 
