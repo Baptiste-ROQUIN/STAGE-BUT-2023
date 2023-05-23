@@ -42,13 +42,13 @@
                         </a>
                     </ul>
                 </li>
-                <li>CLIENT ▼
+                <li style="color: aqua; border-bottom: solid;">CLIENT ▼
                     <ul class="sub-menu">
                         <a href="./../client/devis.html">
                             <li>DEVIS</li>
                         </a>
                         <a href="./../client/engagements.html">
-                            <li>ENGAGEMENTS</li>
+                            <li style="color: aqua;">ENGAGEMENTS</li>
                         </a>
                         <a href="./../client/prestations.html">
                             <li>PRESTATIONS</li>
@@ -104,6 +104,42 @@
     </section>
     
     <main>
+        <button> <p>Procédure de facturation</p> <img src="./../../assets/image/client/fleche_telechargement.png" alt=""></button>
+        <button> <p>Engagement ANRH</p> <img src="./../../assets/image/client/fleche_telechargement.png" alt=""></button>
+        <button> <p>Bon de commande</p> <img src="./../../assets/image/client/fleche_telechargement.png" alt=""></button>
+        <style>
+            main {
+                display: flex;
+                flex-direction: column;
+            }
+            button {
+                display: flex;
+                justify-content: space-between;
+                margin: 3vh auto;
+                width: 30vw;
+                height: 10vh;
+                font-size: 1.5em;
+                background-color: rgba(176, 186, 240, 1);
+                border: solid black;
+                border-radius: 10px;
+                transition: 300ms;
+                cursor: pointer;
+                padding: auto;
+            }
+            button:hover {
+                font-size: 1.7em;
+                width: 40vw;
+                height: 11vh;
+            }
+            button>img {
+                width: auto;
+                height: 70%;
+                margin: auto 10%;
+            }
+            button>p {
+                margin: auto;
+            }
+        </style>
     </main>
 </body>
 

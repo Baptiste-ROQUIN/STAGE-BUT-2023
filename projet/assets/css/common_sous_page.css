@@ -19,7 +19,7 @@ body {margin: 0px; z-index: 0;}
     z-index: -1;
 
     position: relative;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-name: slidein;
 }
 .intro>img {
@@ -41,6 +41,7 @@ h2 {
     border-radius: 25px;
     font-size: 5vh;
     padding-left: 2vw;
+    width: 75%;
 }
 
 div.sous_conteneur {
