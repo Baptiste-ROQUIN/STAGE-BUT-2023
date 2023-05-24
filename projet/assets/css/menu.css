@@ -11,12 +11,19 @@ header {
     z-index: 1;
     transition: 1s;
     text-align: center;
+    background-color: #222222;
 }
 
 header>a>img {
     width: auto;
     height: 95%;
     transition: 0.3s;
+}
+
+header>img {
+    width: auto;
+    height: 95%;
+    cursor: pointer;
 }
 
 nav.menu_static {
@@ -62,7 +69,7 @@ header>section.langue>a>img {
 #scrollUp{
     position: fixed;
     bottom : 2vh;
-    right: -100vw;
+    right: 3vw;
     opacity: 0.7;
     cursor: pointer;
     z-index: 1;

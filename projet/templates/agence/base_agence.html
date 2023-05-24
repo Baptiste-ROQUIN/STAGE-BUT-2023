@@ -8,14 +8,13 @@
     <link rel="stylesheet" href="../../assets/css/menu.css">
     <link rel="stylesheet" href="../../assets/css/common_sous_page.css">
     <link rel="shortcut icon" href="../../assets/image/logo_anrh_sans_bord_avec_text_blanc.png" type="image/x-icon">
-    <script src="../../assets/script/sous_page.js"></script>
+    <script src="./../../assets/script/base.js"></script>
     <title>ANRH</title>
 </head>
 
 <body>
     <header id="header_changeant">
-        <img src="../../assets/image/logo_anrh_sans_bord_avec_text_blanc.png"
-                alt="logo ANRH" id="logo_ANRH">
+        <img src="../../assets/image/logo_anrh_sans_bord_avec_text_blanc.png" alt="logo ANRH" id="logo_ANRH">
         <nav class="menu_static">
             <ul class="menu">
                 <li><a href="./../accueil.html">ACCUEIL</a>
@@ -96,38 +95,60 @@
         <img src="./../../assets/image/fleche_remonter_page.png" />
     </div>
 
-    <iframe id="eventContainer"></iframe>
+    <iframe id="eventContainer" scrolling="yes" frameborder="0" allowfullscreen="true" name="eframeAgence"
+        src="./historique2.html"></iframe>
 
 
-    <footer>
-        <p>COPYRIGHT © 2022 AGENCE NATIONALE DES RESSOURCES HYDRIQUES. TOUS DROITS RÉSERVÉS</p>
-    </footer>
+
 </body>
 <script>
-    /**
-     * ## Changement de page
-     * Cette fonction permet de changer la page.
-     * @param {str} path Chemin vers notre page
-     */
-    function switchPage(path) {
-        document.getElementById("eventContainer").setAttribute("src", path);
-    }
+
     const img = document.querySelector("#header_changeant>img");
     console.log(img);
 
-    img.addEventListener('click', () => 
+    img.addEventListener('click', () =>
         switchPage('./historique2.html')
     )
 </script>
 <style>
-    main {
-        margin: 0px;
-        padding: 0px;
-    }
     iframe {
         width: 100vw;
         height: 100vh;
     }
 </style>
+
 </html>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log('HTML prêt !');
+        eventContainer.onload = function () {
+            // faites tout ce que vous voulez
+            const menu_nav = document.querySelector('.menu_navigation')
+            var element_menu_gauche = eventContainer.contentDocument.getElementsByClassName('sous_menu_gauche');
+            for (let titre of element_menu_gauche) {
+            let newContent = document.createElement('a')
+            if (titre.textContent.length > 30) {
+                var newName = titre.textContent.slice(0, 29);
+                newName += '...'
+            }
+            else var newName = titre.textContent;
+            newContent.textContent = newName;
+            console.log(titre.getBoundingClientRect().top - (innerWidth * (0.035)) + window.pageYOffset)
+            newContent.addEventListener('click', () => {
+                eventContainer.contentWindow.scrollTo({
+                    top: titre.getBoundingClientRect().top - (innerWidth * (0.035)) + eventContainer.contentWindow.pageYOffset,
+                    left: 0,
+                    behavior: "smooth"
+                })
+            })
+            menu_nav.appendChild(newContent);
+        };
+        
+
+
+            let elem = document.elementFromPoint(document.documentElement.clientWidth, 0);
+        }
+
+    });
+</script>
