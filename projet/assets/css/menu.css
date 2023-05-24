@@ -19,15 +19,10 @@ header>a>img {
     transition: 0.3s;
 }
 
-a {
-    text-decoration: none;
-}
-
 nav.menu_static {
     width: 100vw;
     height: 7vh;
 }
-
 
 header>section.langue {
     width: 8%;
@@ -38,76 +33,6 @@ header>section.langue {
 header>section.langue>a>img {
     width: auto;
     height: 50%;
-}
-
-@media screen and (max-width: 450px) {
-    header {
-        background-color: red;
-    }
-}
-
-@media screen and (min-width: 550px) {
-    ul.menu {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        list-style: none;
-        width: 75vw;
-        height: 7vh;
-        margin: 1.5vh auto;
-    }
-    
-    .menu>li {
-        float: left;
-        line-height: 4vh;
-        cursor: pointer;
-        height: 100%;
-        font-size: 1.2em;
-        transition: 1s;
-        color: black;
-    }
-
-    .menu>li>a {
-        text-decoration: none;
-        transition: 1s;
-        color: black;
-    }
-    
-    .sub-menu {
-        padding: 0%;
-        display: none;
-        list-style: none;
-    }
-    
-    .sub-menu li {
-        width: 100%;
-        font-size: smaller;
-        background: #222222;
-        color: white;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        display: none;
-        font-size: 0.6em;
-    }
-    
-    .sub-menu li:last-child {
-        border-bottom: 0;
-    }
-    
-    .sub-menu li:hover {
-        background: black;
-    }
-
-    
-    .menu>li:hover .sub-menu li {
-        display: block;
-
-    }
-
-    .menu>li:hover .sub-menu {
-        display: block;
-
-    }
-    
 }
 
 .menu_navigation {
@@ -145,4 +70,83 @@ header>section.langue>a>img {
 
 #scrollUp>img {
     width: 3.5vw;
+}
+
+@media screen and (max-width: 450px) {
+    header {
+        background-color: red;
+    }
+}
+
+
+@media screen and (min-width: 550px) {
+    ul.menu {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        list-style: none;
+        width: 75vw;
+        height: 7vh;
+        margin: 1.5vh auto;
+    }
+    
+    .menu>li {
+        float: left;
+        line-height: 4vh;
+        cursor: pointer;
+        height: 100%;
+        font-size: 1.2em;
+        transition: 100ms;
+        color: black;
+    }
+
+    .menu>li:hover {
+        border-top: solid;
+    }
+
+    .menu>li>a {
+        text-decoration: none;
+        transition: 1s;
+        color: black;
+    }
+    
+    .sub-menu {
+        padding: 0%;
+        display: none;
+        list-style: none;
+    }
+    
+    .sub-menu li {
+        width: 100%;
+        font-size: smaller;
+        background: #222222;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        display: none;
+        font-size: 0.6em;
+    }
+
+    .sub-menu a {
+        text-decoration: none;
+    }
+    
+    .sub-menu li:last-child {
+        border-bottom: 0;
+    }
+    
+    .sub-menu li:hover {
+        background: black;
+    }
+
+    
+    .menu>li:hover .sub-menu li {
+        display: block;
+
+    }
+
+    .menu>li:hover .sub-menu {
+        display: block;
+
+    }
+    
 }
