@@ -96,26 +96,13 @@
         <img src="./../../assets/image/fleche_remonter_page.png" />
     </div>
 
-    <section class="intro">
-        <img src="./../../assets/image/agence/image_vector.png" alt="">
+    <iframe id="eventContainer"></iframe>
 
-        <div>
-            <h1>HISTORIQUE</h1>
-            <div class="barre_jaune"></div>
-        </div>
-    </section>
-
-    <main>
-        <iframe id="eventContainer"></iframe>
-    </main>
 
     <footer>
         <p>COPYRIGHT © 2022 AGENCE NATIONALE DES RESSOURCES HYDRIQUES. TOUS DROITS RÉSERVÉS</p>
     </footer>
 </body>
-
-</html>
-
 <script>
     /**
      * ## Changement de page
@@ -124,13 +111,23 @@
      */
     function switchPage(path) {
         document.getElementById("eventContainer").setAttribute("src", path);
-
-        const img = document.querySelector(".header_changeant>img");
-        console.log(img);
-
-        img.addEventListener('click', () => 
-            switchPage('./../accueil.html')
-        )
-
     }
+    const img = document.querySelector("#header_changeant>img");
+    console.log(img);
+
+    img.addEventListener('click', () => 
+        switchPage('./historique2.html')
+    )
 </script>
+<style>
+    main {
+        margin: 0px;
+        padding: 0px;
+    }
+    iframe {
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+</html>
+
