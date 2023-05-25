@@ -1,5 +1,13 @@
 // MENU
 
+function supprContenuMenuGauche() {
+    // on supprime la liste permettant de naviguer a gauche
+    const menu_nav = document.querySelector('.menu_navigation');
+    while (menu_nav.hasChildNodes()) {
+        menu_nav.removeChild(menu_nav.firstChild);
+    }
+}
+
 /**
  * ## Changement de page
  * Cette fonction permet de changer la page.
@@ -7,13 +15,6 @@
  */
 function switchPage(path) {
     document.getElementById("eventContainer").setAttribute("src", path);
-
-    // on supprime la liste permettant de naviguer a gauche
-    const menu_nav = document.querySelector('.menu_navigation');
-    while (menu_nav.hasChildNodes()) {
-        menu_nav.removeChild(menu_nav.firstChild);
-    }
-
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -93,7 +94,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Le onload permet de ne pas cree de beug quand on change de sous page
     eventContainer.onload = function () {
         eventContainer.contentWindow.onscroll = function () {
-            console.log(eventContainer.contentWindow.scrollY)
             if (eventContainer.contentWindow.scrollY > 100) {
                 header.style.backgroundColor = "#222222";
                 for (const li of li_menu) {
@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Construction ptit menu a gauche
         // faites tout ce que vous voulez
         const menu_nav = document.querySelector('.menu_navigation')
+        supprContenuMenuGauche();
         var element_menu_gauche = eventContainer.contentDocument.getElementsByClassName('sous_menu_gauche');
         for (let titre of element_menu_gauche) {
 
@@ -137,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let newContent = document.createElement('a')
             if (titre.textContent.length > 30) {
                 var newName = titre.textContent.slice(0, 29);
-                newName += '...'
+                newName += '...';
             }
             else var newName = titre.textContent;
             newContent.textContent = newName;
@@ -167,6 +168,5 @@ document.addEventListener('DOMContentLoaded', function () {
             behavior: "smooth"
         })
     })
-    console.log(btnScrollTop)
 
 });

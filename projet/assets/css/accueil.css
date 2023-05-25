@@ -8,6 +8,10 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* PAGE D'INTRO */
 
 section.page_intro {
