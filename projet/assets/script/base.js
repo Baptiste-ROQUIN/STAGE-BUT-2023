@@ -125,11 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 btnScrollTop.style.right = "-100px"; // Enlève les attributs CSS affectés par javascript
             }
         }
-    }
 
-
-    // Construction ptit menu a gauche
-    eventContainer.onload = function () {
+        // Construction ptit menu a gauche
         // faites tout ce que vous voulez
         const menu_nav = document.querySelector('.menu_navigation')
         var element_menu_gauche = eventContainer.contentDocument.getElementsByClassName('sous_menu_gauche');
@@ -157,6 +154,8 @@ document.addEventListener('DOMContentLoaded', function () {
             menu_nav.appendChild(newContent);
         };
     }
+
+
 
     // JS de la fleche
     // permet de remonter tout en haut de la page quand on appuie sur la flèche
