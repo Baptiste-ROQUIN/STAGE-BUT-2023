@@ -1,55 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('HTML prêt !');
-
-    // permet de remonter tout en haut de la page quand on appuie sur la flèche
-    const btnScrollTop = document.getElementById("scrollUp");
-    btnScrollTop.addEventListener('click', () => {
-        eventContainer.contentWindow.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-        })
-    })
-    console.log(btnScrollTop)
-});
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    console.log('HTML prêt !');
-    eventContainer.onload = function () {
-        // faites tout ce que vous voulez
-        const menu_nav = document.querySelector('.menu_navigation')
-        var element_menu_gauche = eventContainer.contentDocument.getElementsByClassName('sous_menu_gauche');
-        for (let titre of element_menu_gauche) {
-
-            // on récupere tout les nom des elements qui on la classe "sous_menu_gauche"
-            // Si jamais ils sont trop long on les coups et on rajoute "..." à la fin
-            let newContent = document.createElement('a')
-            if (titre.textContent.length > 30) {
-                var newName = titre.textContent.slice(0, 29);
-                newName += '...'
-            }
-            else var newName = titre.textContent;
-            newContent.textContent = newName;
-            
-            // Puis on leur ajoute un evenement
-            // Si un element est clicker sur le menu a gauche on va a l'endroit de la page ou il est
-            newContent.addEventListener('click', () => {
-                eventContainer.contentWindow.scrollTo({
-                    top: titre.getBoundingClientRect().top - (innerWidth * (0.035)) + eventContainer.contentWindow.pageYOffset,
-                    left: 0,
-                    behavior: "smooth"
-                })
-            })
-            menu_nav.appendChild(newContent);
-        };
-    }
-});
-
-
 // MENU
 
 /**
@@ -136,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
     );
 
 
-    // -----------------------------------------------------------------
+    // background du menu et affichage de la fleche ou non
     const header = document.querySelector("header");
     const li_menu = document.querySelectorAll(".menu>li");
     const liens_menu = document.querySelectorAll(".menu>li>a");
@@ -155,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     lien.style.color = "white";
                 }
             }
-        
+
             if (eventContainer.contentWindow.scrollY <= 100) {
                 header.style.backgroundColor = "transparent";
                 for (const li of li_menu) {
@@ -165,19 +113,61 @@ document.addEventListener('DOMContentLoaded', function () {
                     lien.style.color = "black";
                 }
             }
-        
+
             // afficher ou non le bouton pour remonter dans la page
             const btnScrollTop = document.getElementById('scrollUp');
             if (eventContainer.contentWindow.scrollY >= innerHeight * 0.30) {  // Quand on est à 200pixels du haut de page,
                 btnScrollTop.style.right = "10px"; // Replace à 10pixels de la droite l'image
-        
+
                 // on affiche aussi le menu a gauche un fois descendu
-        
+
             } else {
                 btnScrollTop.style.right = "-100px"; // Enlève les attributs CSS affectés par javascript
             }
         }
     }
 
+
+    // Construction ptit menu a gauche
+    eventContainer.onload = function () {
+        // faites tout ce que vous voulez
+        const menu_nav = document.querySelector('.menu_navigation')
+        var element_menu_gauche = eventContainer.contentDocument.getElementsByClassName('sous_menu_gauche');
+        for (let titre of element_menu_gauche) {
+
+            // on récupere tout les nom des elements qui on la classe "sous_menu_gauche"
+            // Si jamais ils sont trop long on les coups et on rajoute "..." à la fin
+            let newContent = document.createElement('a')
+            if (titre.textContent.length > 30) {
+                var newName = titre.textContent.slice(0, 29);
+                newName += '...'
+            }
+            else var newName = titre.textContent;
+            newContent.textContent = newName;
+
+            // Puis on leur ajoute un evenement
+            // Si un element est clicker sur le menu a gauche on va a l'endroit de la page ou il est
+            newContent.addEventListener('click', () => {
+                eventContainer.contentWindow.scrollTo({
+                    top: titre.getBoundingClientRect().top - (innerWidth * (0.035)) + eventContainer.contentWindow.pageYOffset,
+                    left: 0,
+                    behavior: "smooth"
+                })
+            })
+            menu_nav.appendChild(newContent);
+        };
+    }
+
+    // JS de la fleche
+    // permet de remonter tout en haut de la page quand on appuie sur la flèche
+    const btnScrollTop = document.getElementById("scrollUp");
+    btnScrollTop.addEventListener('click', () => {
+        eventContainer.contentWindow.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth"
+        })
+    })
+    console.log(btnScrollTop)
 
 });
