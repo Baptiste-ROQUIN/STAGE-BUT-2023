@@ -15,30 +15,63 @@ function switchPage(path) {
 
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
+
+    // AGENCE
     historique.addEventListener('click', () =>
-        switchPage('./../../templates/agence/historique.html')
+        switchPage('../../projet/templates/agence/historique.html')
     );
-
     juridique.addEventListener('click', () =>
-        switchPage('./../../templates/agence/juridique.html')
+        switchPage('../../projet/templates/agence/juridique.html')
     );
-
     nos_missions.addEventListener('click', () =>
-        switchPage('./../../templates/agence/missions.html')
+        switchPage('../../projet/templates/agence/missions.html')
     );
-
     mot_du_directeur.addEventListener('click', () =>
-        switchPage('./../../templates/agence/mot_du_directeur.html')
+        switchPage('../../projet/templates/agence/mot_du_directeur.html')
     );
-
     moyens.addEventListener('click', () =>
-        switchPage('./../../templates/agence/moyens.html')
+        switchPage('../../projet/templates/agence/moyens.html')
+    );
+    organisation.addEventListener('click', () =>
+        switchPage('../../projet/templates/agence/organisation.html')
     );
 
-    organisation.addEventListener('click', () =>
-        switchPage('./../../templates/agence/organisation.html')
+    // CLIENT
+    devis.addEventListener('click', () =>
+        switchPage('../../projet/templates/client/devis.html')
+    );
+    engagements.addEventListener('click', () =>
+        switchPage('../../projet/templates/client/engagements.html')
+    );
+    prestations.addEventListener('click', () =>
+        switchPage('../../projet/templates/client/prestations.html')
+    );
+
+    // ACTIVITES
+    produits.addEventListener('click', () =>
+        switchPage('../../projet/templates/activites/produits.html')
+    );
+    projets.addEventListener('click', () =>
+        switchPage('../../projet/templates/activites/projets.html')
+    );
+
+    // CARTOGRAPHIE
+    cartographie.addEventListener('click', () =>
+        switchPage('../../projet/templates/cartographie/index.html')
+    );
+
+    // BIBLIOGRAPHIE
+    documentation.addEventListener('click', () =>
+        switchPage('../../projet/templates/bibliographie/documentation.html')
+    );
+    metadonnees.addEventListener('click', () =>
+        switchPage('../../projet/templates/bibliographie/metadonnees.html')
+    );
+
+    // CONTACT
+    contactez_nous.addEventListener('click', () =>
+        switchPage('../../projet/templates/contact/index.html')
     );
 
 });
