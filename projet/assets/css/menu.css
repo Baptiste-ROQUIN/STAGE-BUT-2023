@@ -9,15 +9,14 @@ header {
     justify-content: space-between;
     color: white;
     z-index: 1;
-    transition: 1s;
+    transition: 500ms;
     text-align: center;
-    background-color: #222222;
 }
 
 header>a>img {
     width: auto;
     height: 95%;
-    transition: 0.3s;
+    transition: 300ms;
 }
 
 header>img {
@@ -69,7 +68,7 @@ header>section.langue>a>img {
 #scrollUp{
     position: fixed;
     bottom : 2vh;
-    right: 3vw;
+    right: -100vw;
     opacity: 0.7;
     cursor: pointer;
     z-index: 1;
