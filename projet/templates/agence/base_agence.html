@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="../../assets/css/common_sous_page.css">
     <link rel="shortcut icon" href="../../assets/image/logo_anrh_sans_bord_avec_text_blanc.png" type="image/x-icon">
     <script src="./../../assets/script/base.js"></script>
+    <script src="./../../assets/script/construction_menu.js"></script>
     <title>ANRH</title>
 </head>
 
 <body>
-    <header id="header_changeant">
+    <header>
         <img src="../../assets/image/logo_anrh_sans_bord_avec_text_blanc.png" alt="logo ANRH" id="logo_ANRH">
         <nav class="menu_static">
             <ul class="menu">
@@ -21,24 +22,18 @@
                 </li>
                 <li>L'AGENCE ▼
                     <ul class="sub-menu">
-                        <a href="./../agence/historique.html">
-                            <li>HISTORIQUE</li>
-                        </a>
-                        <a href="./../agence/juridique.html">
-                            <li>JURIDIQUE</li>
-                        </a>
-                        <a href="./../agence/missions.html">
-                            <li>NOS MISSIONS</li>
-                        </a>
-                        <a href="./../agence/mot_du_directeur.html">
-                            <li>MOT DU DIRECTEUR</li>
-                        </a>
-                        <a href="./../agence/moyens.html">
-                            <li>MOYENS</li>
-                        </a>
-                        <a href="./../agence/organisation.html">
-                            <li>ORGANISATION</li>
-                        </a>
+                        <li id="historique">HISTORIQUE</li>
+
+                        <li id="juridique">JURIDIQUE</li>
+
+                        <li id="nos_missions">NOS MISSIONS</li>
+
+                        <li id="mot_du_directeur">MOT DU DIRECTEUR</li>
+
+                        <li id="moyens">MOYENS</li>
+
+                        <li id="organisation">ORGANISATION</li>
+
                     </ul>
                 </li>
                 <li>CLIENT ▼
@@ -96,20 +91,11 @@
     </div>
 
     <iframe id="eventContainer" scrolling="yes" frameborder="0" allowfullscreen="true" name="eframeAgence"
-        src="./historique2.html"></iframe>
+        ></iframe>
 
 
 
 </body>
-<script>
-
-    const img = document.querySelector("#header_changeant>img");
-    console.log(img);
-
-    img.addEventListener('click', () =>
-        switchPage('./historique2.html')
-    )
-</script>
 <style>
     iframe {
         width: 100vw;
@@ -118,37 +104,3 @@
 </style>
 
 </html>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        console.log('HTML prêt !');
-        eventContainer.onload = function () {
-            // faites tout ce que vous voulez
-            const menu_nav = document.querySelector('.menu_navigation')
-            var element_menu_gauche = eventContainer.contentDocument.getElementsByClassName('sous_menu_gauche');
-            for (let titre of element_menu_gauche) {
-            let newContent = document.createElement('a')
-            if (titre.textContent.length > 30) {
-                var newName = titre.textContent.slice(0, 29);
-                newName += '...'
-            }
-            else var newName = titre.textContent;
-            newContent.textContent = newName;
-            console.log(titre.getBoundingClientRect().top - (innerWidth * (0.035)) + window.pageYOffset)
-            newContent.addEventListener('click', () => {
-                eventContainer.contentWindow.scrollTo({
-                    top: titre.getBoundingClientRect().top - (innerWidth * (0.035)) + eventContainer.contentWindow.pageYOffset,
-                    left: 0,
-                    behavior: "smooth"
-                })
-            })
-            menu_nav.appendChild(newContent);
-        };
-        
-
-
-            let elem = document.elementFromPoint(document.documentElement.clientWidth, 0);
-        }
-
-    });
-</script>

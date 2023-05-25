@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const btnScrollTop = document.getElementById("scrollUp");
     btnScrollTop.addEventListener('click', () => {
-        window.scrollTo({
+        eventContainer.contentWindow.scrollTo({
             top: 0,
             left: 0,
             behavior: "smooth"
@@ -12,14 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log(btnScrollTop)
 });
 
-/**
- * ## Changement de page
- * Cette fonction permet de changer la page.
- * @param {str} path Chemin vers notre page
- */
-function switchPage(path) {
-    document.getElementById("eventContainer").setAttribute("src", path);
-}
+
 /*
 window.onscroll = function () {
     const header = document.querySelector("header");
@@ -60,3 +53,35 @@ window.onscroll = function () {
         btnScrollTop.style.right = "-100px"; // Enlève les attributs CSS affectés par javascript
     }
 }*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    console.log('HTML prêt !');
+    eventContainer.onload = function () {
+        // faites tout ce que vous voulez
+        const menu_nav = document.querySelector('.menu_navigation')
+        var element_menu_gauche = eventContainer.contentDocument.getElementsByClassName('sous_menu_gauche');
+        for (let titre of element_menu_gauche) {
+        let newContent = document.createElement('a')
+        if (titre.textContent.length > 30) {
+            var newName = titre.textContent.slice(0, 29);
+            newName += '...'
+        }
+        else var newName = titre.textContent;
+        newContent.textContent = newName;
+        console.log(titre.getBoundingClientRect().top - (innerWidth * (0.035)) + window.pageYOffset)
+        newContent.addEventListener('click', () => {
+            eventContainer.contentWindow.scrollTo({
+                top: titre.getBoundingClientRect().top - (innerWidth * (0.035)) + eventContainer.contentWindow.pageYOffset,
+                left: 0,
+                behavior: "smooth"
+            })
+        })
+        menu_nav.appendChild(newContent);
+    };
+    
+
+
+        let elem = document.elementFromPoint(document.documentElement.clientWidth, 0);
+    }
+
+});
