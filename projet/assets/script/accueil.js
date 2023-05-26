@@ -1,8 +1,8 @@
-function scrollPageBelowPresentation(){
-        window.scroll({
-            top: (window.innerHeight*0.93),
-            behavior: "smooth",
-        });
+function scrollPageBelowPresentation() {
+    window.scroll({
+        top: (window.innerHeight * 0.93),
+        behavior: "smooth",
+    });
 }
 
 function afficher() {
@@ -13,10 +13,13 @@ function afficher() {
     else text_a_afficher.style.display = "none";
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log('HTML prêt !');
-   const info_constantine = document.getElementById("info_CONSTANTINE");
-   info_constantine.addEventListener("click", afficher)
+
+    
+
+    const info_constantine = document.getElementById("info_CONSTANTINE");
+    info_constantine.addEventListener("click", afficher)
 
 
 });
