@@ -8,6 +8,10 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* PAGE D'INTRO */
 
 section.page_intro {
@@ -126,16 +130,23 @@ section.nos_missions>div>h2 {
 }
 
 section.nos_missions>div>a {
-    width: 25%;
+    width: 30%;
     height: 15%;
     margin: auto;
+    padding: auto;
     font-size: 1.6em;
     color: white;
     background-color: #B0C4DE;
     border: solid #B0C4DE;
-    border-radius: 36px;
+    border-radius: 30px;
+    transition: 500ms;
+}
+section.nos_missions>div>a:hover {
+    font-size: 1.8em;
 }
 
+
+section.nos_missions>div>a>p {margin: 1vh auto;}
 
 .decoration_mission {
     width: 100vw;
@@ -158,6 +169,7 @@ section.nos_missions>div>a {
 
 .presentation_services {
     width: 15vw;
+    height: 20vh;
     padding: 1vh;
     margin: 1vw;
     text-align: left;
@@ -175,12 +187,23 @@ section.nos_missions>div>a {
     color: white;
 }
 
-.presentation_services>img {
+.presentation_services>div {
     width:35%;
     height: 45%;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
+#protocoles {background-image: url(./../image/accueil/services/protocoles_base.png);}
+.presentation_services:hover #protocoles {background-image: url(./../image/accueil/services/protocoles_blanc.png);}
 
+#devis {background-image: url(./../image/accueil/services/devis_base.png);}
+.presentation_services:hover #devis {background-image: url(./../image/accueil/services/devis_blanc.png);}
 
+#appel_offre {background-image: url(./../image/accueil/services/appel_doffre_base.png);}
+.presentation_services:hover #appel_offre {background-image: url(./../image/accueil/services/appel_doffre_blanc.png);}
+
+#que_faisons_nous {background-image: url(./../image/accueil/services/que_faisons_nous_base.png);}
+.presentation_services:hover #que_faisons_nous {background-image: url(./../image/accueil/services/que_faisons_nous_blanc.png);}
 /* Actualites */
 
 .actualites {

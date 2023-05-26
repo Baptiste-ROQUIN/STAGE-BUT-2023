@@ -9,14 +9,20 @@ header {
     justify-content: space-between;
     color: white;
     z-index: 1;
-    transition: 1s;
+    transition: 500ms;
     text-align: center;
 }
 
 header>a>img {
     width: auto;
     height: 95%;
-    transition: 0.3s;
+    transition: 300ms;
+}
+
+header>img {
+    width: auto;
+    height: 95%;
+    cursor: pointer;
 }
 
 nav.menu_static {

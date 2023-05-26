@@ -6,106 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/accueil.css">
-    <link rel="stylesheet" href="../assets/css/menu.css">
-    <link rel="shortcut icon" href="../assets/image/logo_anrh_sans_bord_avec_text_blanc.png" type="image/x-icon">
-    <script src="../assets/script/test.js"></script>
-    <title>ANRH</title>
+    <script src="./../assets/script/accueil.js"></script>
 </head>
 
 <body>
-    <header id="header_changeant">
-        <a href="#"><img src="../assets/image/logo_anrh_sans_bord_avec_text_blanc.png" alt="logo ANRH"
-                id="logo_ANRH"></a>
-        <nav class="menu_static">
-            <ul class="menu">
-                <li><a href="#">ACCUEIL</a>
-                </li>
-                <li>L'AGENCE ▼
-                    <ul class="sub-menu">
-                        <a href="./agence/historique.html">
-                            <li>HISTORIQUE</li>
-                        </a>
-                        <a href="./agence/juridique.html">
-                            <li>JURIDIQUE</li>
-                        </a>
-                        <a href="./agence/missions.html">
-                            <li>NOS MISSIONS</li>
-                        </a>
-                        <a href="./agence/mot_du_directeur.html">
-                            <li>MOT DU DIRECTEUR</li>
-                        </a>
-                        <a href="./agence/moyens.html">
-                            <li>MOYENS</li>
-                        </a>
-                        <a href="./agence/organisation.html">
-                            <li>ORGANISATION</li>
-                        </a>
-                    </ul>
-                </li>
-                <li>CLIENT ▼
-                    <ul class="sub-menu">
-                        <a href="./client/devis.html">
-                            <li>DEVIS</li>
-                        </a>
-                        <a href="./client/engagements.html">
-                            <li>ENGAGEMENTS</li>
-                        </a>
-                        <a href="./client/prestations.html">
-                            <li>PRESTATIONS</li>
-                        </a>
-                    </ul>
-                </li>
-                <li>ACTIVITES ▼
-                    <ul class="sub-menu">
-                        <a href="./activites/produits.html">
-                            <li>PRODUITS</li>
-                        </a>
-                        <a href="./activites/projets.html">
-                            <li>PROJETS</li>
-                        </a>
-                    </ul>
-                </li>
-                <li>
-                    <a href="./cartographie/index.html">CARTOGRAPHIE ↗</a>
-                </li>
-                <li>BIBLIOGRAPHIE ▼
-                    <ul class="sub-menu">
-                        <a href="./bibliographie/documentation.html">
-                            <li>DOCUMENTATION</li>
-                        </a>
-                        <a href="./bibliographie/metadonnees.html">
-                            <li>METADONNEES</li>
-                        </a>
-                    </ul>
-                </li>
-                <li>
-                    <a href="./contact/index.html">CONTACTEZ-NOUS ↗</a>
-                </li>
-            </ul>
-        </nav>
-        <section class="langue">
-            <a href=""> <img src="./../assets/image/menu/drapeau_france.png" alt="drapeau_france"></a>
-            <a href=""> <img src="./../assets/image/menu/drapeau_algerie.png" alt="drapeau_algerie"></a>
-        </section>
-    </header>
-
-    <nav class="menu_navigation">
-        <a href="#directions">Services</a>
-        <a href="#directions">Nos Actualités</a>
-        <a href="#directions">Nos Directions</a>
-        <a href="#directions">Dans notre Domaine</a>
-        <a href="#directions">Galerie</a>
-    </nav>
-
-    <div id="scrollUp">
-        <img src="./../assets/image/fleche_remonter_page.png" />
-    </div>
-
-
-
-
-
-
 
     <section class="page_intro">
 
@@ -129,10 +33,8 @@
     <main>
         <section class="nos_missions">
             <div>
-                <h2>
-                    Nos Missions
-                </h2>
-                <a href="./agence/missions.html">VOIR PLUS</a>
+                <h2 class="sous_menu_gauche">Nos Missions</h2>
+                <a href="./agence/missions.html"><p>VOIR PLUS</p></a>
             </div>
             <p>
                 ANRH a pour mission de prospecter, de veiller et mettre à jour l’inventaire et l’évaluation des
@@ -147,41 +49,35 @@
         <img src="./../assets/image/accueil/decoration_mission.svg" alt="" class="decoration_mission">
 
         <div class="titre">
-            <h1>
-                Services
-            </h1>
+            <h1 class="sous_menu_gauche">Services</h1>
             <div class="barre_jaune_titre"></div>
         </div>
         <section class="services">
             <a href="./page_solo/protocoles.html" class="presentation_services">
-                <img src="./../assets/image/accueil/services/protocoles_base.png" alt="">
-                <h2>
-                    Protocoles
+                <div id="protocoles"></div>
+                <h2>Protocoles
                 </h2>
                 <p>
                     Explication de nos protocoles en vigueur
                 </p>
             </a>
             <a href="./client/devis.html" class="presentation_services">
-                <img src="./../assets/image/accueil/services/devis_base.png" alt="">
-                <h2>
-                    Devis
-                </h2>
+                <div id="devis"></div>
+                <h2>Devis</h2>
                 <p>
                     Simuler un devis de nos services
                 </p>
             </a>
             <a href="./page_solo/appel_offre.html" class="presentation_services">
-                <img src="./../assets/image/accueil/services/appel_doffre_base.png" alt="">
-                <h2>
-                    Appel d'offres
+                <div id="appel_offre"></div>
+                <h2>Appel d'offres
                 </h2>
                 <p>
                     Consulter nos appels d'offre
                 </p>
             </a>
             <a href="./client/prestations.html" class="presentation_services">
-                <img src="./../assets/image/accueil/services/que_faisons_nous_base.png" alt="">
+                <div id="que_faisons_nous"></div>
                 <h2>
                     Que faisons nous
                 </h2>
@@ -195,9 +91,7 @@
         <img src="./../assets/image/accueil/actualites/vague_degrade.svg" alt="image de vague degrade" class="vague en_haut">
         <section class="actualites">
             <div class="titre">
-                <h1>
-                    Nos Actualités
-                </h1>
+                <h1 class="sous_menu_gauche">Nos Actualités</h1>
                 <div class="barre_jaune_titre"></div>
             </div>
             <section class="les_articles">
@@ -249,9 +143,7 @@
         <!-- DIRECTIONS -->
         <section class="directions">
             <div class="titre">
-                <h1 id="directions">
-                    Nos Directions
-                </h1>
+                <h1 id="directions" class="sous_menu_gauche">Nos Directions</h1>
                 <div class="barre_jaune_titre"></div>
             </div>
             <div class="directions_image">
@@ -265,7 +157,7 @@
                         <strong>Adresse</strong> : Bureau de poste 20 Août 1955 B.P. 532 CONSTANTINE <br>
                         Tél: +213 (0) 31/60/71/63 <br>
                         Fax: +213 (0) 31/60/71/64 <br>
-                        Mail: dre@anrh.dz
+                        Mail: <a href="mailto:drc@anrh.dz;">dre@anrh.dz</a>
                     </p>
                 </div>
 
@@ -275,7 +167,8 @@
                         <strong>Adresse</strong> : Bureau de poste 20 Août 1955 B.P. 532 CONSTANTINE <br>
                         Tél: +213 (0) 31/60/71/63 <br>
                         Fax: +213 (0) 31/60/71/64 <br>
-                        Mail: dre@anrh.dz
+                        Mail: <a href="mailto:drc@anrh.dz;">dre@anrh.dz</a>
+                        
                     </p>
                 </div>
 
@@ -287,9 +180,7 @@
         <img src="./../assets/image/accueil/notre_domaine/deco_les_vagues.png" alt="" class="en_haut">
         <section class="domaine">
             <div class="titre">
-                <h1>
-                    Dans notre Domaine
-                </h1>
+                <h1 class="sous_menu_gauche">Dans notre Domaine</h1>
                 <div class="barre_jaune_titre"></div>
             </div>
             <section class="partenaires">
@@ -309,9 +200,7 @@
 
         <!-- GALERIE -->
         <div class="titre">
-            <h1>
-                Galerie
-            </h1>
+            <h1 class="sous_menu_gauche">Galerie</h1>
             <div class="barre_jaune_titre"></div>
 
         </div>
@@ -321,5 +210,3 @@
         Clique-moi
     </button> -->
 </body>
-
-</html>
