@@ -156,3 +156,34 @@ header>section.langue>a>img {
     }
     
 }
+
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 1050px) {
+    body {
+        font-size: 0.7em;
+    }
+}
+@media screen and (max-width: 870px) {
+    body {
+        font-size: 0.6em;
+    }
+}
+@media screen and (max-width: 750px) {
+    body {
+        font-size: 0.5em;
+    }
+}
+@media screen and (max-width: 550px) {
+    body {
+        font-size: 0.4em;
+    }
+}
+@media screen and (max-width: 450px) {
+    body {
+        font-size: 0.2em;
+    }
+}
