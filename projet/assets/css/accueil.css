@@ -279,14 +279,21 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     display: flex;
     flex-wrap: wrap;
     margin: auto 10vw;
+    justify-content: center;
 }
 
 .bouton_info {
-    width: 15vw;
+    width: 14vw;
+    height: 10vh;
+    padding: 1vh 0.5vw;
     background-color: #B0C4DE;
     border-radius: 25px;
     cursor: pointer;
-    margin: auto 2vw;
+    margin: 2vh 1vw;
+}
+
+.bouton_info .titre{
+    font-weight: bold;
 }
 
 .bouton_info:hover {

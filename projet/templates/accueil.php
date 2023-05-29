@@ -176,14 +176,16 @@ $connexion = connect_bd();
                             
 
                             // creation du div
-                            echo "<div class='bouton_info' id='info_CONSTANTINE'>";
-                            
+                            echo "<div class='bouton_info'>";
                                 echo '<h3>'.$class_direction->getNom().'</h3>';
                                 echo '<p>';
-                                    echo 'Adresse :'. $class_direction->getAdresse() .'<br>';
-                                    echo 'Tél : '. $class_direction->getTel1() .' <br>';
-                                    echo 'Fax : '. $class_direction->getFax() .' <br>';
-                                    echo 'Mail : <a href="mailto:'. $class_direction->getMail() .';">'. $class_direction->getMail() .'</a>';
+                                    echo '<span class="titre"> Adresse </span> : '. $class_direction->getAdresse() .'<br>';
+                                    echo '<span class="titre">Tél </span>: '. $class_direction->getTel1() .' <br>';
+                                    if ($class_direction->getTel2() != '') {
+                                        echo '<span class="titre">Tél2 </span>: '. $class_direction->getTel2() .' <br>';
+                                    }
+                                    echo '<span class="titre">Fax </span>: '. $class_direction->getFax() .' <br>';
+                                    echo '<span class="titre">Mail </span>: <a href="mailto:'. $class_direction->getMail() .';">'. $class_direction->getMail() .'</a>';
                                 echo '</p>';
                             echo '</div>';
                         }
@@ -221,8 +223,10 @@ $connexion = connect_bd();
         <div class="titre">
             <h1 class="sous_menu_gauche">Galerie</h1>
             <div class="barre_jaune_titre"></div>
-
         </div>
+        <section class="galerie">
+
+        </section>
     </main>
 
     <footer>

@@ -93,6 +93,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Le onload permet de ne pas cree de beug quand on change de sous page
     eventContainer.onload = function () {
+        var cssLink = document.createElement("link");
+        cssLink.href = "./../../../projet/assets/css/common.css"; 
+        cssLink.rel = "stylesheet"; 
+        cssLink.type = "text/css"; 
+        eventContainer.contentDocument.head.appendChild(cssLink);
+
+
         eventContainer.contentWindow.onscroll = function () {
             if (eventContainer.contentWindow.scrollY > 100) {
                 header.style.backgroundColor = "#222222";

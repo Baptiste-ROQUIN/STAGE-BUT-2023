@@ -5,21 +5,26 @@ function scrollPageBelowPresentation() {
     });
 }
 
-function afficher() {
-    const text_a_afficher = document.querySelector("#info_CONSTANTINE>p");
-    console.log(text_a_afficher);
-    if (text_a_afficher.style.display == "none")
+function afficher_last_child(parent_text) {
+    const text_a_afficher = parent_text.lastChild;
+    if (text_a_afficher.style.display == "none"){
         text_a_afficher.style.display = "block";
-    else text_a_afficher.style.display = "none";
+        parent_text.style.height = "auto";
+    }
+    else {
+        text_a_afficher.style.display = "none";
+        parent_text.style.height = "10vh";
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     console.log('HTML prêt !');
 
-    
-
-    const info_constantine = document.getElementById("info_CONSTANTINE");
-    info_constantine.addEventListener("click", afficher)
+    const tout_les_bouton_info = document.getElementsByClassName("bouton_info");
+    for (const bouton_info of tout_les_bouton_info) {
+        bouton_info.addEventListener("click", () =>  { afficher_last_child(bouton_info);});
+        
+    }
 
 
 });
