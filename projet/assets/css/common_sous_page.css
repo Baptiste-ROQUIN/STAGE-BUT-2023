@@ -1,12 +1,30 @@
-@keyframes slidein {
+
+@keyframes apparition {
     from {
-        top: -40vh;
+        height: 0vh;
+        font-size: 0em;
+    }
+    20%{
+        height: 0vh;
+        font-size: 0em;
     }
 
     to {
-        top: 0vh;
+        height: auto;
+        font-size: 1em;
     }
 }
+
+@keyframes apparition_titre_jaune {
+    from {
+        left: -100vh;
+    }
+
+    to {
+        left: 0vh;
+    }
+}
+
 
 body {margin: 0px; z-index: 0;}
 .intro {
@@ -61,6 +79,10 @@ h2 {
     font-size: 5vh;
     padding-left: 2vw;
     width: 75%;
+    position: relative;
+
+    animation-duration: 1s;
+    animation-name: apparition_titre_jaune;
 }
 
 .sous_conteneur {
@@ -70,6 +92,10 @@ h2 {
     margin: 4vh auto;
     padding: 1vh 1vw;
     list-style: none;
+    background-color: white;
+
+    animation-duration: 1.7s;
+    animation-name: apparition;
 }
 
 .indentation {

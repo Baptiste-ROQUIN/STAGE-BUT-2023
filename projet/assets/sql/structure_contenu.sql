@@ -5,15 +5,15 @@ DROP TABLE IF EXISTS DIRECTIONS;
 CREATE TABLE DOMAINE (
     idDomaine INT(9) PRIMARY KEY NOT NULL AUTO_INCREMENT,
     surnom VARCHAR(55),
-    image VARCHAR(500),
+    image blob,
     text VARCHAR(55)
 );
 
 CREATE TABLE NEWS (
     idNews INT(9) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    imageNews VARCHAR(500),
+    imageNews blob,
     titreNews VARCHAR(255),
-    dateNews timestamp(3),
+    -- dateNews timestamp(3),
     textNews VARCHAR(10000)
 );
 
@@ -29,6 +29,34 @@ CREATE TABLE DIRECTIONS (
     
     
 -- insertion of values
+insert into NEWS(imageNews, titreNews, textNews) values (
+    './images/fleche_remonter_page.png',
+    'La 17ème édition du Salon International des Equipements, Technologies et Services de l’Eau ” SIEE POLUTTEC “',
+    'Le Salon International des Equipements, Technologies et Services de l’Eau ” SIEE POLUTTEC ” <br>
+    Lundi 20 juin 2022, l’Agence Nationale des Ressources en Eau a participé aux activités de lancement de la 17ème édition du Salon International des Equipements, Technologies et Services de l’Eau SIEE POLUTTEC au niveau du Centre International de Conférences Abdellatif Rahal dans la capitale.
+    Où l’agence a eu la visite du Ministre des Ressources en Eau et de la Sécurité hydriques, M. Karim Hosni, accompagné d’une importante délégation ministérielle qui comprend : le Ministre de la pèche et des productions halieutiques, le Ministre de l’Industrie, le Ministre de l’Environnement, 
+    le Ministre de Transition Energétique et Energies Renouvelables ; Où le Directeur Général de l’Agence Nationale des Ressources hydriques, M. El Mahdi Oggad, a présenté les projets les plus importants de l’Agence dédiés à la mobilisation, l’étude et la préservation de la ressource en eau.
+    Le directeur régional de l’Agence nationale des ressources hydriques de la wilaya d’Adrar, M. Taha Ansari, a également participé aux conférences programmées pendant les jours de l’exposition, pour échanger des expériences dans le domaine des ressources en eau ainsi que discuter des défis 
+    les plus importants auxquels le secteur est confronté pour parvenir à la sécurité hydriques. La conférence à portée sur « La valeur ajoutée dans la gestion de l’eau et la numérisation des données hydrogéologiques et hydrologiques pour la région du sud-ouest dans 09 wilayas.'
+),(
+    './images/fleche_remonter_page.png',
+    'La journée mondiale de l’eau 2022',
+    'Sous le thème : « Les eaux souterraines : rendre l’invisible visible », l’agence nationale des ressources hydriques a célébré la journée mondiale de l’eau, coïncidant avec le 22 mars, à l’instar des entreprises et organismes du secteur des Ressources en Eau et de la Sécurité Hydrique. Aux palais d’exposition BOUHRAOUA a Ghardaïa.
+    Cette journée portes ouvertes a accueilli multiples entreprises opérant dans le domaine de l’eau. Une journée marquée par la visite du Secrétaire général des Ressources en eau et de la sécurité hydriques, Mr. Taha derbal, qui lors de son passage à notre stand, a évoqué l’importance du rôle de l’ANRH dans le secteur des ressources en eau et de la sécurité hydrique en particulier. Car l’agence est un portail de données pour tout ce qui concerne les ressources en eaux de surface et souterraines au niveau national.
+    Il a également noté que les dossiers des autorisations de forage de puits doivent être traités de manière rapide pour faciliter le bénéfice des autorisations pour les agriculteurs.
+    Au cours de cette journée, l’Agence Nationale des Ressources hydriques a présenté son rôle dans la mobilisation et la préservation des eaux souterraines à travers les données et études dont dispose l’ANRH dans ce domaine. Des présentations ont été faites aux étudiants et élèves pour les familiariser avec les différentes fonctions de l’Agence et son rôle effectif dans le secteur des ressources en eau et de la sécurité hydriques.
+'
+),(
+    './images/fleche_remonter_page.png',
+    'Salon International de l’Equipement, des Technologies et des Services de l’Eau 2021.',
+    'Sous l’autorité du Directeur Général de l’Agence Nationale des Ressources hydriques, l’agence a participé aux activités du Salon International des équipements, des Technologies et des services de l’eau dans sa 16ème édition du 27 au 30 septembre 2021 au Centre International de Conférences Abdel Latif Rahal (CIC).
+    En présence de diverses entreprises du secteur public et privé et les cadres de l’ANRH, l’agence a présenté à travers son pavillon ses missions ainsi que ses prestations. Elle a également exposé les équipements de chaque département et quelques cartes illustrant les ressources en eaux de surface et des souterraines.
+    Cette édition était une occasion pour s’initier aux dernières technologies techniques et équipements liés au secteur des ressources en eau. C’était aussi une occasion pour les professionnels du secteur des ressources en eau pour échanger leurs expériences, notamment avec les séminaires et les discussions qui ont été programmés lors de l’événement sur la évolutions et enjeux du secteur des ressources en eau, notamment avec les récents changements climatiques qui ont lieu dans le monde.'
+);
+
+
+
+
 insert into DIRECTIONS values (
     'ANRH BLIDA',
     'Route de Guerrouaou B.P. 150 Soumâa Wilaya de BLIDA',
