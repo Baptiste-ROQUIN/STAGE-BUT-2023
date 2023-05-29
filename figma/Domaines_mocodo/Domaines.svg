@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="172" height="406" viewBox="0 0 172 406" xmlns="http://www.w3.org/2000/svg">
+<rect id="frame" x="0" y="0" width="172" height="406" fill="#f7f7f7" stroke="none" stroke-width="0"/>
+
+<!-- Entity DOMAINE -->
+<g>
+	<g>
+		<rect x="51" y="9" width="70" height="25" fill="#f1b6da" stroke="#f1b6da" stroke-width="0" opacity="1"/>
+		<rect x="51" y="34" width="70" height="77" fill="#fde0ef" stroke="#fde0ef" stroke-width="0" opacity="1"/>
+		<rect x="51" y="9" width="70" height="102" fill="none" stroke="#de77ae" stroke-width="2" opacity="1"/>
+		<line x1="51" y1="34" x2="121" y2="34" stroke="#de77ae" stroke-width="1"/>
+	</g>
+	<text x="56" y="26.75" fill="#000" font-family="Verdana" font-size="12">DOMAINE</text>
+	<text x="56" y="51.8" fill="#000" font-family="Verdana" font-size="12">id</text>
+	<line x1="56" y1="54" x2="68" y2="54" stroke="#000" stroke-width="1"/>
+	<text x="56" y="68.8" fill="#000" font-family="Verdana" font-size="12">surnom</text>
+	<text x="56" y="85.8" fill="#000" font-family="Verdana" font-size="12">image</text>
+	<text x="56" y="102.8" fill="#000" font-family="Verdana" font-size="12">text</text>
+</g>
+
+<!-- Entity NEWS -->
+<g>
+	<g>
+		<rect x="46" y="136" width="80" height="25" fill="#f1b6da" stroke="#f1b6da" stroke-width="0" opacity="1"/>
+		<rect x="46" y="161" width="80" height="93" fill="#fde0ef" stroke="#fde0ef" stroke-width="0" opacity="1"/>
+		<rect x="46" y="136" width="80" height="118" fill="none" stroke="#de77ae" stroke-width="2" opacity="1"/>
+		<line x1="46" y1="161" x2="126" y2="161" stroke="#de77ae" stroke-width="1"/>
+	</g>
+	<text x="67" y="153.75" fill="#000" font-family="Verdana" font-size="12">NEWS</text>
+	<text x="51" y="178.8" fill="#000" font-family="Verdana" font-size="12">idNews</text>
+	<line x1="51" y1="181" x2="95" y2="181" stroke="#000" stroke-width="1"/>
+	<text x="51" y="195.8" fill="#000" font-family="Verdana" font-size="12">imageNews</text>
+	<text x="51" y="212.8" fill="#000" font-family="Verdana" font-size="12">titreNews</text>
+	<text x="51" y="229.8" fill="#000" font-family="Verdana" font-size="12">dateNews</text>
+	<text x="51" y="246.8" fill="#000" font-family="Verdana" font-size="12">texteNews</text>
+</g>
+
+<!-- Entity DIRECTIONS -->
+<g>
+	<g>
+		<rect x="41" y="279" width="90" height="25" fill="#f1b6da" stroke="#f1b6da" stroke-width="0" opacity="1"/>
+		<rect x="41" y="304" width="90" height="93" fill="#fde0ef" stroke="#fde0ef" stroke-width="0" opacity="1"/>
+		<rect x="41" y="279" width="90" height="118" fill="none" stroke="#de77ae" stroke-width="2" opacity="1"/>
+		<line x1="41" y1="304" x2="131" y2="304" stroke="#de77ae" stroke-width="1"/>
+	</g>
+	<text x="47" y="296.75" fill="#000" font-family="Verdana" font-size="12">DIRECTIONS</text>
+	<text x="46" y="321.8" fill="#000" font-family="Verdana" font-size="12">nom</text>
+	<line x1="46" y1="324" x2="74" y2="324" stroke="#000" stroke-width="1"/>
+	<text x="46" y="338.8" fill="#000" font-family="Verdana" font-size="12">adresse</text>
+	<text x="46" y="355.8" fill="#000" font-family="Verdana" font-size="12">tel</text>
+	<text x="46" y="372.8" fill="#000" font-family="Verdana" font-size="12">fax</text>
+	<text x="46" y="389.8" fill="#000" font-family="Verdana" font-size="12">mail</text>
+</g>
+</svg>

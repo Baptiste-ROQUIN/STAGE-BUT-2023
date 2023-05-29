@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="../assets/css/common.css">
     <script src="./../assets/script/accueil.js"></script>
 </head>
+<?php
+require_once('../bd/connexion.php');
+require_once('../bd/les_classes.php');
+$connexion = connect_bd();
+?>
 
 <body>
 
@@ -35,7 +40,9 @@
         <section class="nos_missions">
             <div>
                 <h2 class="sous_menu_gauche">Nos Missions</h2>
-                <a href="./agence/missions.html"><p>VOIR PLUS</p></a>
+                <a href="./agence/missions.html">
+                    <p>VOIR PLUS</p>
+                </a>
             </div>
             <p>
                 ANRH a pour mission de prospecter, de veiller et mettre à jour l’inventaire et l’évaluation des
@@ -88,7 +95,8 @@
         </section>
 
         <!-- ACTUALITES -->
-        <img src="./../assets/image/accueil/actualites/vague_degrade.svg" alt="image de vague degrade" class="vague en_haut">
+        <img src="./../assets/image/accueil/actualites/vague_degrade.svg" alt="image de vague degrade"
+            class="vague en_haut">
         <section class="actualites">
             <div class="titre">
                 <h1 class="sous_menu_gauche">Nos Actualités</h1>
@@ -151,37 +159,38 @@
             </div>
 
             <section class="les_boutons_info">
-                <div class="bouton_info" id="info_CONSTANTINE">
-                    <h3>ANRH BLIDA</h3>
-                    <p>
-                        <strong>Adresse</strong> : Route de Guerrouaou B.P. 150 Soumâa Wilaya de BLIDA <br>
-                        Tél: +213 (0) 31/60/71/63 <br>
-                        Fax: +213 (0) 31/60/71/64 <br>
-                        Mail: <a href="mailto:drc@anrh.dz;">dre@anrh.dz</a>
-                    </p>
-                </div>
+                <?php
+                $sql = "SELECT * FROM DIRECTIONS";
+                $stmt_directions = $connexion->prepare($sql);
+                $stmt_directions->execute();
 
-                <div class="bouton_info" id="info_CONSTANTINE">
-                    <h3>ANRH EST - CONSTANTINE</h3>
-                    <p>
-                        <strong>Adresse</strong> : Bureau de poste 20 Août 1955 B.P. 532 CONSTANTINE <br>
-                        Tél: +213 (0) 31/60/71/63 <br>
-                        Fax: +213 (0) 31/60/71/64 <br>
-                        Mail: <a href="mailto:drc@anrh.dz;">dre@anrh.dz</a>
-                    </p>
-                </div>
+                // gestion d'erreurs
+                if (!$stmt_directions)
+                    echo "Pb d'accès au directions";
+                else {
+                    if ($stmt_directions->rowCount() == 0)
+                        echo "Il n'existe aucune directions <br/>";
+                    else {
+                        foreach ($stmt_directions as $row_direction) {
+                            $class_direction = new DIRECTION($row_direction);
+                            
 
-                <div class="bouton_info" id="info_CONSTANTINE">
-                    <h3>ANRH EST - CONSTANTINE</h3>
-                    <p>
-                        <strong>Adresse</strong> : Bureau de poste 20 Août 1955 B.P. 532 CONSTANTINE <br>
-                        Tél: +213 (0) 31/60/71/63 <br>
-                        Fax: +213 (0) 31/60/71/64 <br>
-                        Mail: <a href="mailto:drc@anrh.dz;">dre@anrh.dz</a>
-                        
-                    </p>
-                </div>
-
+                            // creation du div
+                            echo "<div class='bouton_info' id='info_CONSTANTINE'>";
+                            
+                                echo '<h3>'.$class_direction->getNom().'</h3>';
+                                echo '<p>';
+                                    echo '<strong>Adresse</strong> :'. $class_direction->getAdresse() .'<br>';
+                                    echo 'Tél: '. $class_direction->getTel1() .' <br>';
+                                    echo 'Fax: '. $class_direction->getFax() .' <br>';
+                                    echo 'Mail: <a href="mailto:'. $class_direction->getMail() .';">'. $class_direction->getMail() .'</a>';
+                                echo '</p>';
+                            echo '</div>';
+                        }
+                    }
+                }
+                
+                ?>
             </section>
         </section>
 
@@ -195,12 +204,12 @@
             </div>
             <section class="partenaires">
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche gauche">
-                    <div>
-                        <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
-                        <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
-                        <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
-                        <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
-                    </div>
+                <div>
+                    <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
+                    <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
+                    <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
+                    <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
+                </div>
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche">
             </section>
 

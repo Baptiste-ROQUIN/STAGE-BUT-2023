@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ACCUEIL
     logo_ANRH.addEventListener('click', () =>
-        switchPage('../../projet/templates/accueil.html')
+        switchPage('../../projet/templates/accueil.php')
     );
     accueil.addEventListener('click', () =>
-        switchPage('../../projet/templates/accueil.html')
+        switchPage('../../projet/templates/accueil.php')
     );
 
     // AGENCE
