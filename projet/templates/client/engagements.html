@@ -12,13 +12,16 @@
 
     <section class="intro">
         <img src="./../../assets/image/agence/image_vector.png" alt="">
+        <div>
+            <h1>ENGAGEMENTS</h1>
+            <div class="barre_jaune"></div>
+        </div>
     </section>
     
     <main>
-        <button> <p>Procédure de facturation</p> <img src="./../../assets/image/client/fleche_telechargement.png" alt=""></button>
-        <button> <p>Engagement ANRH</p> <img src="./../../assets/image/client/fleche_telechargement.png" alt=""></button>
-        <button> <p>Bon de commande</p> <img src="./../../assets/image/client/fleche_telechargement.png" alt=""></button>
-
+        <a href="./../../assets/fichier/engagements/La-procedure-de-facturation-des-etudes-realisees-par-lANRH.pdf" target="_blank"> <p>Procédure de facturation</p> <img src="./../../assets/image/client/fleche_telechargement.png" alt=""></a>
+        <a href="./../../assets/fichier/engagements/La-procedure-de-facturation-des-etudes-realisees-par-lANRH.pdf" target="_blank"> <p>Engagement ANRH</p> <img src="./../../assets/image/client/fleche_telechargement.png" alt=""></a>
+        <a href="./../../assets/fichier/engagements/bon-de-commande.pdf" target="_blank"> <p>Bon de commande</p> <img src="./../../assets/image/client/fleche_telechargement.png" alt=""></a>
     </main>
     <footer>
         <p>COPYRIGHT © 2022 AGENCE NATIONALE DES RESSOURCES HYDRIQUES. TOUS DROITS RÉSERVÉS</p>
@@ -28,7 +31,8 @@
             display: flex;
             flex-direction: column;
         }
-        button {
+
+        a {
             display: flex;
             justify-content: space-between;
             margin: 3vh auto;
@@ -41,18 +45,20 @@
             transition: 300ms;
             cursor: pointer;
             padding: auto;
+            text-decoration: none;
+            color: black;
         }
-        button:hover {
+        a:hover {
             font-size: 1.7em;
             width: 40vw;
             height: 11vh;
         }
-        button>img {
+        a>img {
             width: auto;
             height: 70%;
             margin: auto 10%;
         }
-        button>p {
+        a>p {
             margin: auto;
         }
     </style>

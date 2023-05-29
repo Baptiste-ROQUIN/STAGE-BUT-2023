@@ -51,12 +51,15 @@ header>section.langue>a>img {
     text-align: left;
     font-size: 0.8em;
     width: 5vw;
-    
+
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0px 25px 25px 0px;
+    margin: 0.5vh 0.5vw;
 }
 
 .menu_navigation>a {
     opacity: 0.5;
-    color: #555555;
+    color: #000000;
     margin: 0.4vh 0vw;
     cursor: pointer;
 }
@@ -65,9 +68,9 @@ header>section.langue>a>img {
     opacity: 1;
 }
 
-#scrollUp{
+#scrollUp {
     position: fixed;
-    bottom : 2vh;
+    bottom: 2vh;
     right: -100vw;
     opacity: 0.7;
     cursor: pointer;
@@ -95,7 +98,7 @@ header>section.langue>a>img {
         height: 7vh;
         margin: 1.5vh auto;
     }
-    
+
     .menu>li {
         float: left;
         line-height: 4vh;
@@ -115,13 +118,13 @@ header>section.langue>a>img {
         transition: 1s;
         color: black;
     }
-    
+
     .sub-menu {
         padding: 0%;
         display: none;
         list-style: none;
     }
-    
+
     .sub-menu li {
         width: 100%;
         font-size: smaller;
@@ -135,16 +138,16 @@ header>section.langue>a>img {
     .sub-menu a {
         text-decoration: none;
     }
-    
+
     .sub-menu li:last-child {
         border-bottom: 0;
     }
-    
+
     .sub-menu li:hover {
         background: black;
     }
 
-    
+
     .menu>li:hover .sub-menu li {
         display: block;
 
@@ -154,7 +157,7 @@ header>section.langue>a>img {
         display: block;
 
     }
-    
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -162,29 +165,33 @@ header>section.langue>a>img {
         font-size: 0.8em;
     }
 }
+
 @media screen and (max-width: 1050px) {
     body {
         font-size: 0.7em;
     }
 }
+
 @media screen and (max-width: 870px) {
     body {
         font-size: 0.6em;
     }
 }
+
 @media screen and (max-width: 750px) {
     body {
         font-size: 0.5em;
     }
 }
+
 @media screen and (max-width: 550px) {
     body {
         font-size: 0.4em;
     }
 }
+
 @media screen and (max-width: 450px) {
     body {
         font-size: 0.2em;
     }
 }
-

@@ -63,12 +63,13 @@ h2 {
     width: 75%;
 }
 
-div.sous_conteneur {
+.sous_conteneur {
     border: solid white;
     border-radius: 25px;
     box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.25);
     margin: 4vh auto;
     padding: 1vh 1vw;
+    list-style: none;
 }
 
 .indentation {
