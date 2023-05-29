@@ -180,10 +180,10 @@ $connexion = connect_bd();
                             
                                 echo '<h3>'.$class_direction->getNom().'</h3>';
                                 echo '<p>';
-                                    echo '<strong>Adresse</strong> :'. $class_direction->getAdresse() .'<br>';
-                                    echo 'Tél: '. $class_direction->getTel1() .' <br>';
-                                    echo 'Fax: '. $class_direction->getFax() .' <br>';
-                                    echo 'Mail: <a href="mailto:'. $class_direction->getMail() .';">'. $class_direction->getMail() .'</a>';
+                                    echo 'Adresse :'. $class_direction->getAdresse() .'<br>';
+                                    echo 'Tél : '. $class_direction->getTel1() .' <br>';
+                                    echo 'Fax : '. $class_direction->getFax() .' <br>';
+                                    echo 'Mail : <a href="mailto:'. $class_direction->getMail() .';">'. $class_direction->getMail() .'</a>';
                                 echo '</p>';
                             echo '</div>';
                         }
