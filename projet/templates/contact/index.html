@@ -14,14 +14,14 @@
     </section>
 
     <main id="contact">
-        <form action="">
+        <form action="" class="sous_conteneur_sans_animation">
             <div>
-                <label for="">Nom :</label>
+                <label for="">Nom :        </label>
                 <input type="text" name="" id="" placeholder="jean" required>
             </div>
 
             <div>
-                <label for="">Vous etes :</label>
+                <label for="">Vous etes :      </label>
                 <select name="statut" id="statut-select" required>
                     <option value="etudiant">Etudiant(e)</option>
                     <option value="presta">Prestataire</option>
@@ -30,11 +30,11 @@
             </div>
 
             <div>
-                <label for="">Email :</label>
+                <label for="">Email :        </label>
                 <input type="email" name="" id="" placeholder="jean@gmail.com" required>
             </div>
             <div>
-                <label for="">Message :</label>
+                <label for="">Message :         </label>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Bonjour..." required></textarea>
             </div>
 
@@ -101,13 +101,14 @@
         }
 
         form input[type=email] {
-            width: 20vw;
+            width: 90%;
         }
 
         form select,
         input[type=submit] {
             width: max-content;
             padding: 1vh 1vw;
+            cursor: pointer;
         }
 
         form input,
@@ -126,9 +127,6 @@
         }
         #info_utile>div {
             width: 49%;
-        }
-        #reseaux_sociaux{
-            
         }
 
         #reseaux_sociaux img {

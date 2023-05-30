@@ -4,10 +4,6 @@
         height: 0vh;
         font-size: 0em;
     }
-    20%{
-        height: 0vh;
-        font-size: 0em;
-    }
 
     to {
         height: auto;
@@ -97,9 +93,26 @@ h2 {
     list-style: none;
     background-color: white;
 
-    animation-duration: 1.7s;
+    animation-duration: 0.7s;
     animation-name: apparition;
 }
+
+.sous_conteneur_sans_animation {
+    border: solid white;
+    border-radius: 25px;
+    box-shadow: 0px 4px 63px rgba(0, 0, 0, 0.25);
+    margin: 4vh auto;
+    padding: 1vh 1vw;
+    list-style: none;
+    background-color: #EEEEFF;
+}
+
+/* .sous_conteneur_sans_animation div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: ;
+} */
 
 .indentation {
     position: relative;
