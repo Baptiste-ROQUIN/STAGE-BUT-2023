@@ -204,6 +204,9 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 
 #que_faisons_nous {background-image: url(./../image/accueil/services/que_faisons_nous_base.png);}
 .presentation_services:hover #que_faisons_nous {background-image: url(./../image/accueil/services/que_faisons_nous_blanc.png);}
+
+
+
 /* Actualites */
 
 .actualites {
@@ -221,12 +224,16 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 }
 
 .article {
-    width: 17vw;
+    width: 19vw;
     padding: 1vw;
     background-color: #B0C4DE;
     border: #B0C4DE solid;
     border-radius: 25px;
     margin: 2vh 2vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .article>img {
@@ -245,7 +252,12 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     background-color: white;
     border: white solid;
     border-radius: 25px;
+
     transition: 1s;
+}
+
+.article>img {
+    border-radius: 25px;
 }
 
 .article>a:hover {
@@ -331,8 +343,46 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 }
 
 
+/* Galerie */
+.galerie {
+    margin-left: 7vw;
+
+}
+
+.galerie>h2 {
+    text-align: left;
+    width: fit-content;
+    border-radius: 25px;
+    padding: 1vh 2vw;
+    background-color: #B0C4DE;
+}
+
+.galerie>div {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
+}
+
+.galerie h3 {
+    width: 19vw;
+}
+
+.galerie img {
+    width: 13vw;
+    height: auto;
+    border: solid black;
+    border-radius: 10px;
+}
 
 
+.galerie video {
+    width: 17vw;
+    height: 20vh;
+    border: solid black;
+}
 
 
 

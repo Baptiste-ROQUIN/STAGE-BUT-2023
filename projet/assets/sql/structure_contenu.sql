@@ -5,13 +5,14 @@ DROP TABLE IF EXISTS DIRECTIONS;
 CREATE TABLE DOMAINE (
     idDomaine INT(9) PRIMARY KEY NOT NULL AUTO_INCREMENT,
     surnom VARCHAR(55),
-    image blob,
+    image VARCHAR(255),
+    adresseWeb VARCHAR(255),
     text VARCHAR(55)
 );
 
 CREATE TABLE NEWS (
     idNews INT(9) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    imageNews blob,
+    imageNews VARCHAR(255),
     titreNews VARCHAR(255),
     -- dateNews timestamp(3),
     textNews VARCHAR(10000)
@@ -29,8 +30,59 @@ CREATE TABLE DIRECTIONS (
     
     
 -- insertion of values
+insert into DOMAINE(surnom, image, adresseWeb, text) values (
+    'ASA',
+    './../assets/image/accueil/notre_domaine/ASA.png',
+    'https://asal.dz/',
+    'Agence Spacial Algérienne'
+),(
+    'AGIRE',
+    './../assets/image/accueil/notre_domaine/AGIRE.png',
+    'http://agire.dz/',
+    ''
+),(
+    'ANBT',
+    './../assets/image/accueil/notre_domaine/ANBT.png',
+    'http://197.112.0.211/soudoud-dzair/',
+    'Agence National des Barrages et Transpherts'
+),(
+    'INCT',
+    './../assets/image/accueil/notre_domaine/INCT.png',
+    'http://www.inct.mdn.dz/',
+    'Institut National de Cartographie et de Télédétection'
+),(
+    'MADRP',
+    './../assets/image/accueil/notre_domaine/MADRP.png',
+    'https://madr.gov.dz/',
+    "Ministère de l'Agriculture et du Développement Rural"
+),(
+    'MRE',
+    './../assets/image/accueil/notre_domaine/MRE.png',
+    'https://www.mre.gov.dz/',
+    'Ministère des Ressources en Eau'
+),(
+    'ONA',
+    './../assets/image/accueil/notre_domaine/ONA.png',
+    'http://ona-dz.org/',
+    "Office National de l'Assainissement"
+),(
+    'ONID',
+    './../assets/image/accueil/notre_domaine/ONID.png',
+    'https://onidri.dz/',
+    "Office National de l'Irrigation et du Drainage"
+),(
+    'SEAAL',
+    './../assets/image/accueil/notre_domaine/SEAAL.png',
+    'https://www.seaal.dz/',
+    "Société des Eaux et de l'Assainissement d'Alger"
+);
+
+
+
+
+
 insert into NEWS(imageNews, titreNews, textNews) values (
-    './images/fleche_remonter_page.png',
+    './../assets/image/accueil/actualites/news_1.png',
     'La 17ème édition du Salon International des Equipements, Technologies et Services de l’Eau ” SIEE POLUTTEC “',
     'Le Salon International des Equipements, Technologies et Services de l’Eau ” SIEE POLUTTEC ” <br>
     Lundi 20 juin 2022, l’Agence Nationale des Ressources en Eau a participé aux activités de lancement de la 17ème édition du Salon International des Equipements, Technologies et Services de l’Eau SIEE POLUTTEC au niveau du Centre International de Conférences Abdellatif Rahal dans la capitale.
@@ -39,7 +91,7 @@ insert into NEWS(imageNews, titreNews, textNews) values (
     Le directeur régional de l’Agence nationale des ressources hydriques de la wilaya d’Adrar, M. Taha Ansari, a également participé aux conférences programmées pendant les jours de l’exposition, pour échanger des expériences dans le domaine des ressources en eau ainsi que discuter des défis 
     les plus importants auxquels le secteur est confronté pour parvenir à la sécurité hydriques. La conférence à portée sur « La valeur ajoutée dans la gestion de l’eau et la numérisation des données hydrogéologiques et hydrologiques pour la région du sud-ouest dans 09 wilayas.'
 ),(
-    './images/fleche_remonter_page.png',
+    './../assets/image/accueil/actualites/news_2.png',
     'La journée mondiale de l’eau 2022',
     'Sous le thème : « Les eaux souterraines : rendre l’invisible visible », l’agence nationale des ressources hydriques a célébré la journée mondiale de l’eau, coïncidant avec le 22 mars, à l’instar des entreprises et organismes du secteur des Ressources en Eau et de la Sécurité Hydrique. Aux palais d’exposition BOUHRAOUA a Ghardaïa.
     Cette journée portes ouvertes a accueilli multiples entreprises opérant dans le domaine de l’eau. Une journée marquée par la visite du Secrétaire général des Ressources en eau et de la sécurité hydriques, Mr. Taha derbal, qui lors de son passage à notre stand, a évoqué l’importance du rôle de l’ANRH dans le secteur des ressources en eau et de la sécurité hydrique en particulier. Car l’agence est un portail de données pour tout ce qui concerne les ressources en eaux de surface et souterraines au niveau national.
@@ -47,7 +99,7 @@ insert into NEWS(imageNews, titreNews, textNews) values (
     Au cours de cette journée, l’Agence Nationale des Ressources hydriques a présenté son rôle dans la mobilisation et la préservation des eaux souterraines à travers les données et études dont dispose l’ANRH dans ce domaine. Des présentations ont été faites aux étudiants et élèves pour les familiariser avec les différentes fonctions de l’Agence et son rôle effectif dans le secteur des ressources en eau et de la sécurité hydriques.
 '
 ),(
-    './images/fleche_remonter_page.png',
+    './../assets/image/accueil/actualites/news_3.jpg',
     'Salon International de l’Equipement, des Technologies et des Services de l’Eau 2021.',
     'Sous l’autorité du Directeur Général de l’Agence Nationale des Ressources hydriques, l’agence a participé aux activités du Salon International des équipements, des Technologies et des services de l’eau dans sa 16ème édition du 27 au 30 septembre 2021 au Centre International de Conférences Abdel Latif Rahal (CIC).
     En présence de diverses entreprises du secteur public et privé et les cadres de l’ANRH, l’agence a présenté à travers son pavillon ses missions ainsi que ses prestations. Elle a également exposé les équipements de chaque département et quelques cartes illustrant les ressources en eaux de surface et des souterraines.

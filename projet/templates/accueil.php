@@ -104,42 +104,31 @@ $connexion = connect_bd();
             </div>
             <section class="les_articles">
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche gauche">
-                <article>
-                    <section class="article">
-                        <img src="./../assets/image/accueil/actualites/news_1.png" alt="">
-                        <h2>Les eaux souterraines: rendre l’invisible visible</h2>
-                        <p>Lorem Ipsum is centuries, but also the leap into electronic typesetting, remaining
-                            essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                            containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                            Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                        <a href="">Lire la suite →</a>
-                    </section>
-                </article>
-                <article>
-                    <section class="article">
-                        <img src="./../assets/image/accueil/actualites/news_1.png" alt="">
-                        <h2>Les eaux souterraines: rendre l’invisible visible</h2>
-                        <p>Lorem Ipsum is centuries, but also the leap into electronic typesetting, remaining
-                            essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                            containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                            Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                        <a href="">Lire la suite →</a>
-                    </section>
-                </article>
-                <article>
-                    <section class="article">
-                        <img src="./../assets/image/accueil/actualites/news_1.png" alt="">
-                        <h2>Les eaux souterraines: rendre l’invisible visible</h2>
-                        <p>Lorem Ipsum is centuries, but also the leap into electronic typesetting, remaining
-                            essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-                            containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                            Aldus PageMaker including versions of Lorem Ipsum.
-                        </p>
-                        <a href="">Lire la suite →</a>
-                    </section>
-                </article>
+
+                <?php
+                $sql = "SELECT * FROM NEWS";
+                $stmt_news = $connexion->prepare($sql);
+                $stmt_news->execute();
+
+                // gestion d'erreurs
+                if (!$stmt_news)
+                    echo "Pb d'accès au news";
+                else {
+                    if ($stmt_news->rowCount() == 0)
+                        echo "Il n'existe aucune news <br/>";
+                    else {
+                        foreach ($stmt_news as $row_news) {
+                            $class_news = new NEWS($row_news);
+
+                            echo '<section class="article">';
+                                echo '<img src="' . $class_news->getImageNews() . '" alt="' . $class_news->getImageNews() . '">';
+                                echo '<h2>' . $class_news->getTitreNews() . '</h2>';
+                                echo '<p>' . $class_news->getExtraitTextNews() . ' </p>';
+                                echo '<a href="">Lire la suite →</a>';
+                            echo '</section>';
+                }}}
+                ?>
+
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche">
             </section>
 
@@ -173,25 +162,25 @@ $connexion = connect_bd();
                     else {
                         foreach ($stmt_directions as $row_direction) {
                             $class_direction = new DIRECTION($row_direction);
-                            
+
 
                             // creation du div
                             echo "<div class='bouton_info'>";
-                                echo '<h3>'.$class_direction->getNom().'</h3>';
-                                echo '<p>';
-                                    echo '<span class="titre"> Adresse </span> : '. $class_direction->getAdresse() .'<br>';
-                                    echo '<span class="titre">Tél </span>: '. $class_direction->getTel1() .' <br>';
-                                    if ($class_direction->getTel2() != '') {
-                                        echo '<span class="titre">Tél2 </span>: '. $class_direction->getTel2() .' <br>';
-                                    }
-                                    echo '<span class="titre">Fax </span>: '. $class_direction->getFax() .' <br>';
-                                    echo '<span class="titre">Mail </span>: <a href="mailto:'. $class_direction->getMail() .';">'. $class_direction->getMail() .'</a>';
-                                echo '</p>';
+                            echo '<h3>' . $class_direction->getNom() . '</h3>';
+                            echo '<p>';
+                            echo '<span class="titre"> Adresse </span> : ' . $class_direction->getAdresse() . '<br>';
+                            echo '<span class="titre">Tél </span>: ' . $class_direction->getTel1() . ' <br>';
+                            if ($class_direction->getTel2() != '') {
+                                echo '<span class="titre">Tél2 </span>: ' . $class_direction->getTel2() . ' <br>';
+                            }
+                            echo '<span class="titre">Fax </span>: ' . $class_direction->getFax() . ' <br>';
+                            echo '<span class="titre">Mail </span>: <a href="mailto:' . $class_direction->getMail() . ';">' . $class_direction->getMail() . '</a>';
+                            echo '</p>';
                             echo '</div>';
                         }
                     }
                 }
-                
+
                 ?>
             </section>
         </section>
@@ -206,11 +195,27 @@ $connexion = connect_bd();
             </div>
             <section class="partenaires">
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche gauche">
+
                 <div>
-                    <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
-                    <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
-                    <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
-                    <a href=""><img src="./../assets/image/accueil/notre_domaine/ANBT.png" alt=""></a>
+                    <?php
+                    $sql = "SELECT * FROM DOMAINE";
+                    $stmt_domaine = $connexion->prepare($sql);
+                    $stmt_domaine->execute();
+
+                    // gestion d'erreurs
+                    if (!$stmt_domaine)
+                        echo "Pb d'accès au domaine";
+                    else {
+                        if ($stmt_domaine->rowCount() == 0)
+                            echo "Il n'existe aucun domaine <br/>";
+                        else {
+                            foreach ($stmt_domaine as $row_domaine) {
+                                $classe_domaine = new DOMAINE($row_domaine);
+                                echo '<a href="' . $classe_domaine->getAdresseWeb() . '" target="_blank"><img src="' . $classe_domaine->getImage() . '" alt="' . $classe_domaine->getSurnom() . '"></a>';
+                            }
+                        }
+                    }
+                    ?>
                 </div>
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche">
             </section>
@@ -225,7 +230,48 @@ $connexion = connect_bd();
             <div class="barre_jaune_titre"></div>
         </div>
         <section class="galerie">
+            <h2>Photo</h2>
+            <div>
+                <div>
+                    <h3>Terrains</h3>
+                    <a href=""> <img src="./../assets/image/accueil/galerie/Amenagement-Agricole.jpg" alt=""></a>
+                </div>
+                <div>
+                    <h3>Ouvrages</h3>
+                    <a href=""> <img src="./../assets/image/accueil/galerie/Hammam-Salhine-1280x960-1-768x576.jpg"
+                            alt=""></a>
+                </div>
+                <div>
+                    <h3>Equipements</h3>
+                    <a href=""> <img
+                            src="./../assets/image/accueil/galerie/hydras-ii11D922F5-A7E9-FDC4-A40E-311AFC3E03A6-1.jpg"
+                            alt=""></a>
+                </div>
+                <div>
+                    <h3>Evenements</h3>
+                    <a href=""> <img src="./../assets/image/accueil/galerie/evenements.jpeg" alt=""></a>
+                </div>
+                <div>
+                    <h3>Regroupement</h3>
+                    <a href=""> <img src="./../assets/image/accueil/galerie/regroupement.jpg" alt=""></a>
+                </div>
+            </div>
 
+            <h2>Video</h2>
+            <div>
+                <div>
+                    <h3>Forage de reconnaissance (ANRH) de Ouled Djellal Biskra</h3>
+                    <video src=""></video>
+                </div>
+                <div>
+                    <h3>Forage de reconnaissance ANRH de Tébessa</h3>
+                    <video src=""></video>
+                </div>
+                <div>
+                    <h3>Forage de reconnaissance ANRH de Béni Ounif Béchar</h3>
+                    <video src=""></video>
+                </div>
+            </div>
         </section>
     </main>
 

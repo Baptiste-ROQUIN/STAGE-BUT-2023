@@ -57,6 +57,8 @@ body {margin: 0px; z-index: 0;}
 .intro>div>h1 {
     font-size: 4vw;
     margin: auto;
+    color: white;
+    text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 div.barre_jaune {
     width: 20vw;
@@ -80,6 +82,7 @@ h2 {
     padding-left: 2vw;
     width: 75%;
     position: relative;
+
 
     animation-duration: 1s;
     animation-name: apparition_titre_jaune;

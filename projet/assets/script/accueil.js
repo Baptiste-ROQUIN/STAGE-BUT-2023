@@ -27,4 +27,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
+    // DOMAINE
+    const tout_les_domaines_et_fleches = document.querySelector(".partenaires");
+    const tout_les_domaines = document.querySelectorAll(".partenaires>div>a");
+    var cpt = 0;
+    for (var un_domaine of tout_les_domaines) {
+        cpt++;
+        if (cpt>5) {
+            un_domaine.style.display = "none";
+        }
+    }
+
+    // const fleche_gauche_domaine = document.querySelector(".partenaires>.gauche");
+    // fleche_gauche_domaine.addEventListener("click", () => {
+    //     for (var un_domaine of tout_les_domaines) {
+    //         cpt++;
+    //         if (cpt>5) {
+    //             un_domaine.style.display = "none";
+    //         }
+    //     }
+    // })
+
+    
+
+
 });
