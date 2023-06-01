@@ -51,13 +51,13 @@ body {margin: 0px; z-index: 0;}
     text-align: center;
 }
 .intro>div>h1 {
-    font-size: 4vw;
+    font-size: 3vw;
     margin: auto;
     color: white;
     text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 div.barre_jaune {
-    width: 20vw;
+    width: 15vw;
     height: 0.5vh;
     background-color: #FCCC10;
     margin: 1vh auto;
@@ -65,7 +65,7 @@ div.barre_jaune {
 
 
 main {
-    padding: 7vw;
+    padding: 10vw;
     height: auto;
     background-color: white;
 }
@@ -74,7 +74,7 @@ h2 {
     background-color: #FCCC10;
     border: solid #FCCC10;
     border-radius: 25px;
-    font-size: 5vh;
+    font-size: 4vh;
     padding-left: 2vw;
     width: 75%;
     position: relative;

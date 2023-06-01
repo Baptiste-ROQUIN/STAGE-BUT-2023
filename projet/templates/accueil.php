@@ -122,7 +122,7 @@ $connexion = connect_bd();
 
                             echo '<section class="article">';
                                 echo '<img src="' . $class_news->getImageNews() . '" alt="' . $class_news->getImageNews() . '">';
-                                echo '<h2>' . $class_news->getTitreNews() . '</h2>';
+                                echo '<h2>' . $class_news->getExtraitTitreNews() . '</h2>';
                                 echo '<p>' . $class_news->getExtraitTextNews() . ' </p>';
                                 echo '<a href="">Lire la suite →</a>';
                             echo '</section>';
@@ -261,15 +261,21 @@ $connexion = connect_bd();
             <div>
                 <div>
                     <h3>Forage de reconnaissance (ANRH) de Ouled Djellal Biskra</h3>
-                    <video src=""></video>
+                    <video controls width="250">
+                        <source src="./../assets/video/video_1.mp4"type="video/mp4">
+                    </video>
                 </div>
                 <div>
                     <h3>Forage de reconnaissance ANRH de Tébessa</h3>
-                    <video src=""></video>
+                    <video controls width="250">
+                        <source src="./../assets/video/video_2.mp4"type="video/mp4">
+                    </video>
                 </div>
                 <div>
                     <h3>Forage de reconnaissance ANRH de Béni Ounif Béchar</h3>
-                    <video src=""></video>
+                    <video controls width="250">
+                        <source src="./../assets/video/video_3.mp4"type="video/mp4">
+                    </video>
                 </div>
             </div>
         </section>

@@ -39,9 +39,15 @@ class NEWS
         return $this->textNews;
     }
 
-    function getExtraitTextNews() 
+    function getExtraitTextNews()
     {
-        $extrait = substr($this->textNews, 0, 200) . '...';
+        $extrait = substr($this->textNews, 0, 150) . '...';
+        return $extrait;
+    }
+
+    function getExtraitTitreNews()
+    {
+        $extrait = substr($this->titreNews, 0, 75) . '...';
         return $extrait;
     }
 

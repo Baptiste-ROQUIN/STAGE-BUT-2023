@@ -211,6 +211,7 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 
 .actualites {
     background-color: #EEEEFF;
+    height: 75vh;
 }
 
 .actualites>.titre {
@@ -219,12 +220,14 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 
 .les_articles {
     width: 100vw;
+    height: 63vh;
     display: flex;
     justify-content: center;
 }
 
 .article {
-    width: 19vw;
+    width: 20vw;
+    height: auto;
     padding: 1vw;
     background-color: #B0C4DE;
     border: #B0C4DE solid;
