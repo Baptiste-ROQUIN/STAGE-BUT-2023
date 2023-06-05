@@ -340,7 +340,7 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     justify-content: space-around;
 }
 
-.partenaires>div>a>img {
+.partenaires>a>img {
     height: 18vh;
     margin: 2vh 1vw;
 }

@@ -1,3 +1,9 @@
+<?php
+    require_once('../bd/connexion.php');
+    require_once('../bd/les_classes.php');
+    $connexion = connect_bd();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -9,11 +15,6 @@
     <link rel="stylesheet" href="../assets/css/common.css">
     <script src="./../assets/script/accueil.js"></script>
 </head>
-<?php
-require_once('../bd/connexion.php');
-require_once('../bd/les_classes.php');
-$connexion = connect_bd();
-?>
 
 <body>
 
@@ -196,7 +197,7 @@ $connexion = connect_bd();
             <section class="partenaires">
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche gauche">
 
-                <div>
+                
                     <?php
                     $sql = "SELECT * FROM DOMAINE";
                     $stmt_domaine = $connexion->prepare($sql);
@@ -216,8 +217,8 @@ $connexion = connect_bd();
                         }
                     }
                     ?>
-                </div>
-                <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche">
+                
+                <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche droite">
             </section>
 
         </section>
@@ -230,7 +231,7 @@ $connexion = connect_bd();
             <div class="barre_jaune_titre"></div>
         </div>
         <section class="galerie">
-            <h2>Photo</h2>
+            <h2>Photos</h2>
             <div>
                 <div>
                     <h3>Terrains</h3>
@@ -257,12 +258,13 @@ $connexion = connect_bd();
                 </div>
             </div>
 
-            <h2>Video</h2>
+            <h2>Vidéos</h2>
             <div>
                 <div>
                     <h3>Forage de reconnaissance (ANRH) de Ouled Djellal Biskra</h3>
                     <video controls width="250">
-                        <source src="./../assets/video/video_1.mp4"type="video/mp4">
+                        <source src="./../assets/video/video_1.mp4" type="video/mp4">
+                        <a href="./../assets/video/video_1.mp4">MP4</a>
                     </video>
                 </div>
                 <div>

@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // on récupere tout les nom des elements qui on la classe "sous_menu_gauche"
             // Si jamais ils sont trop long on les coups et on rajoute "..." à la fin
-            let newContent = document.createElement('a')
+            let newContent = document.createElement('li')
             if (titre.textContent.length > 30) {
                 var newName = titre.textContent.slice(0, 29);
                 newName += '...';
