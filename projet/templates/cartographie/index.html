@@ -6,9 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../assets/css/common_sous_page.css">
-</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js"></script>
+    <style>
+      #map {
+        width: 70vw;
+        height: 70vh;
+        margin: 10vh auto;
+      }
+    </style>
+  </head>
+  <body>
 
-<body>
+
     <section class="intro">
         <img src="./../../assets/image/agence/image_vector.png" alt="">
         <div>
@@ -16,10 +26,19 @@
             <div class="barre_jaune"></div>
         </div>
     </section>
-    
+
     <main>
-        <h1>NON</h1>
+        <iframe src="./carte.html" frameborder="0"></iframe>
     </main>
+
+
+    <style>
+        main iframe {
+            width: 80vw;
+            height: 70vh;
+            margin: 5vh auto;
+        }
+    </style>
 </body>
 
 </html>

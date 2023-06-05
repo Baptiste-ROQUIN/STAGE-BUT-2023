@@ -21,7 +21,7 @@
       });
 
       const source = new ol.source.TileJSON({
-        url: `https://api.maptiler.com/maps/basic-v2/tiles.json?key=${key}`, // source URL
+        url: `https://api.maptiler.com/maps/streets-v2/tiles.json?key=${key}`, // source URL
         tileSize: 512,
         crossOrigin: 'anonymous'
       });
@@ -36,10 +36,29 @@
         target: 'map',
         view: new ol.View({
           constrainResolution: true,
-          center: ol.proj.fromLonLat([-43.206091, -22.920387,]), // starting position [lng, lat]
-          zoom: 12 // starting zoom
+          center: ol.proj.fromLonLat([4, 32]), // starting position [lng, lat]
+          zoom: 6 // starting zoom
         })
       });
+
+      const marker = ol.layer.Vector({
+          source: new ol.source.Vector({
+              features: [
+                new ol.Feature({
+                  geometry: new ol.geom.Point(
+                    ol.proj.fromLonLat([4, 32])
+                  )
+                })
+              ],
+          }),
+          style: new ol.style.Style({
+            image: new ol.style.Icon({
+              src: 'https://docs.maptiler.com/openlayers/default-marker/marker-icon.png'
+            })
+          })
+      })
+
+      map.addLayer(marker);
     </script>
   </body>
 </html>
