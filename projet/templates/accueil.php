@@ -1,7 +1,7 @@
 <?php
-    require_once('../bd/connexion.php');
-    require_once('../bd/les_classes.php');
-    $connexion = connect_bd();
+require_once('../bd/connexion.php');
+require_once('../bd/les_classes.php');
+$connexion = connect_bd();
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +17,8 @@
 </head>
 
 <body>
+
+
 
     <section class="page_intro">
 
@@ -122,12 +124,14 @@
                             $class_news = new NEWS($row_news);
 
                             echo '<section class="article">';
-                                echo '<img src="' . $class_news->getImageNews() . '" alt="' . $class_news->getImageNews() . '">';
-                                echo '<h2>' . $class_news->getExtraitTitreNews() . '</h2>';
-                                echo '<p>' . $class_news->getExtraitTextNews() . ' </p>';
-                                echo '<a href="">Lire la suite →</a>';
+                            echo '<img src="' . $class_news->getImageNews() . '" alt="' . $class_news->getImageNews() . '">';
+                            echo '<h2>' . $class_news->getExtraitTitreNews() . '</h2>';
+                            echo '<p>' . $class_news->getExtraitTextNews() . ' </p>';
+                            echo '<a href="">Lire la suite →</a>';
                             echo '</section>';
-                }}}
+                        }
+                    }
+                }
                 ?>
 
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche">
@@ -144,8 +148,11 @@
                 <h1 id="directions" class="sous_menu_gauche">Nos Directions</h1>
                 <div class="barre_jaune_titre"></div>
             </div>
-            <div class="directions_image">
-                <img src="" alt="">
+
+            <div id="map">
+                <iframe
+                    src="https://api.maptiler.com/maps/fa5d9a31-b618-4e90-8150-8b4266cee8e1/?key=izsC4a5EZcD9ViO7PDvZ#3.9/34.11775/5.42487"
+                    frameborder="0"></iframe>
             </div>
 
             <section class="les_boutons_info">
@@ -197,27 +204,27 @@
             <section class="partenaires">
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche gauche">
 
-                
-                    <?php
-                    $sql = "SELECT * FROM DOMAINE";
-                    $stmt_domaine = $connexion->prepare($sql);
-                    $stmt_domaine->execute();
 
-                    // gestion d'erreurs
-                    if (!$stmt_domaine)
-                        echo "Pb d'accès au domaine";
+                <?php
+                $sql = "SELECT * FROM DOMAINE";
+                $stmt_domaine = $connexion->prepare($sql);
+                $stmt_domaine->execute();
+
+                // gestion d'erreurs
+                if (!$stmt_domaine)
+                    echo "Pb d'accès au domaine";
+                else {
+                    if ($stmt_domaine->rowCount() == 0)
+                        echo "Il n'existe aucun domaine <br/>";
                     else {
-                        if ($stmt_domaine->rowCount() == 0)
-                            echo "Il n'existe aucun domaine <br/>";
-                        else {
-                            foreach ($stmt_domaine as $row_domaine) {
-                                $classe_domaine = new DOMAINE($row_domaine);
-                                echo '<a href="' . $classe_domaine->getAdresseWeb() . '" target="_blank"><img src="' . $classe_domaine->getImage() . '" alt="' . $classe_domaine->getSurnom() . '"></a>';
-                            }
+                        foreach ($stmt_domaine as $row_domaine) {
+                            $classe_domaine = new DOMAINE($row_domaine);
+                            echo '<a href="' . $classe_domaine->getAdresseWeb() . '" target="_blank"><img src="' . $classe_domaine->getImage() . '" alt="' . $classe_domaine->getSurnom() . '"></a>';
                         }
                     }
-                    ?>
-                
+                }
+                ?>
+
                 <img src="./../assets/image/accueil/fleche.png" alt="" class="fleche droite">
             </section>
 
@@ -270,24 +277,22 @@
                 <div>
                     <h3>Forage de reconnaissance ANRH de Tébessa</h3>
                     <video controls width="250">
-                        <source src="./../assets/video/video_2.mp4"type="video/mp4">
+                        <source src="./../assets/video/video_2.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div>
                     <h3>Forage de reconnaissance ANRH de Béni Ounif Béchar</h3>
                     <video controls width="250">
-                        <source src="./../assets/video/video_3.mp4"type="video/mp4">
+                        <source src="./../assets/video/video_3.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>COPYRIGHT © 2022 AGENCE NATIONALE DES RESSOURCES HYDRIQUES. TOUS DROITS RÉSERVÉS</p>
-    </footer>
 
     <!-- <button>
         Clique-moi
     </button> -->
 </body>
+</html>

@@ -282,12 +282,24 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 
 /* DIRECTIONS */
 
-.directions>.directions_image {
+#map {
+    z-index: 1;
+    width: 90%;
+    height: 90%;
+    margin: auto;
+
     height: 50vh;
     width: 80vw;
     background-color: rgba(50, 46, 47, 0.8);
 
     margin: 2vh auto 10vh auto;
+    padding-top: 2.5vh;
+}
+
+#map iframe {
+    width: 95%;
+    height: 95%;
+    
 }
 
 .les_boutons_info {
