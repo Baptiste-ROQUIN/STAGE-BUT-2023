@@ -23,6 +23,7 @@ function afficher_n_enfant(start, liste_a_afficher, n=5){
     var cpt = 0;
     start = start%liste_a_afficher.length
     var end = (start+n)%liste_a_afficher.length;
+    if (start < -1 ) start += liste_a_afficher.length;
 
 
     console.log("start = "+ start + "; end = " + end + "; cpt = " + cpt)
@@ -31,17 +32,22 @@ function afficher_n_enfant(start, liste_a_afficher, n=5){
         const un_domaine = liste_a_afficher[index];
 
         if (start<index && index<end) {
-            un_domaine.style.visibility = "visible";
+            un_domaine.style.transform = "scale(1)";
             un_domaine.style.width = "auto";
         }
 
         else if (end < start && index>start || end < start && index < end){
-            un_domaine.style.visibility = "visible";
+            un_domaine.style.transform = "scale(1)";
+            un_domaine.style.width = "auto";
+        }
+
+        else if (end < start && index>start || end < start && index < end){
+            un_domaine.style.transform = "scale(1)";
             un_domaine.style.width = "auto";
         }
 
         else {
-            un_domaine.style.visibility = "collapse";
+            un_domaine.style.transform = "scale(0)";
             un_domaine.style.width = "0px";
         }
 
@@ -60,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // DOMAINE
-    const tout_les_domaines = document.querySelectorAll(".partenaires>a, .partenaires>a");
+    const tout_les_domaines = document.querySelectorAll(".partenaires>a");
 
     var start = 0;
     afficher_n_enfant(start, tout_les_domaines);

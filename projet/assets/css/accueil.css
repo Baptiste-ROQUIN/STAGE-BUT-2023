@@ -305,6 +305,8 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     border-radius: 25px;
     cursor: pointer;
     margin: 2vh 1vw;
+
+
 }
 
 .bouton_info .titre{
@@ -339,6 +341,12 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     display: flex;
     justify-content: space-around;
 }
+.partenaires>a {
+
+    transition: 300ms;
+}
+
+
 
 .partenaires>a>img {
     height: 18vh;
