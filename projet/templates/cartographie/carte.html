@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <title>Display a GeoJSON Layer</title>
 
-    <!--  you want to try out OpenLayers without downloading anything (not recommended for production) 
+<head>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Display a GeoJSON Layer</title>
+
+  <!--  you want to try out OpenLayers without downloading anything (not recommended for production) 
     <script src="https://cdn.jsdelivr.net/npm/ol@v7.4.0/dist/ol.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
     -->
-    <script src="./../../assets/static/open_layer/dist/ol.js"></script>
-    <link rel="stylesheet" href="./../../assets/static/open_layer/ol.css">
-    <style>
-      #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
-    </style>
-  </head>
-  <body>
-    <div id="map">
-      <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
-    </div>
-    <script>
-      const key = 'izsC4a5EZcD9ViO7PDvZ';
+  <script src="./../../assets/static/open_layer/dist/ol.js"></script>
+  <link rel="stylesheet" href="./../../assets/static/open_layer/ol.css">
+  <style>
+    #map {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+</head>
 
-      const attribution = new ol.control.Attribution({
-        collapsible: false,
-      });
+<body>
+  <div id="map">
+    <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img
+        src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
+  </div>
+  <script>
+    const key = 'izsC4a5EZcD9ViO7PDvZ';
 
-      const source = new ol.source.TileJSON({
-        url: `https://api.maptiler.com/maps/streets-v2/tiles.json?key=${key}`, // source URL
-        tileSize: 512,
-        crossOrigin: 'anonymous'
-      });
+    const attribution = new ol.control.Attribution({
+      collapsible: false,
+    });
 
-      const map = new ol.Map({
-        layers: [
-          new ol.layer.Tile({
-            source: source
+    const source = new ol.source.TileJSON({
+      url: `https://api.maptiler.com/maps/streets-v2/tiles.json?key=${key}`, // source URL
+      tileSize: 512,
+      crossOrigin: 'anonymous'
+    });
+
+    // const map = new ol.Map({
+    // layers: [
+    //   new ol.layer.Tile({
+    //     source: source
+    //   })
+    // ],
+    // controls: ol.control.defaults.defaults({ attribution: false }).extend([attribution]),
+    // target: 'map',
+
+    var map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        constrainResolution: true,
+        center: ol.proj.fromLonLat([4, 32]), // starting position [lng, lat]
+        zoom: 6 // starting zoom
+      })
+    });
+
+    const ADRAR = new ol.layer.Vector({
+      source: new ol.source.Vector({
+        features: [
+          new ol.Feature({
+            geometry: new ol.geom.Point(
+              ol.proj.fromLonLat([-0.2880199, 27.8836448])
+            )
           })
         ],
-        controls: ol.control.defaults.defaults({attribution: false}).extend([attribution]),
-        target: 'map',
-        view: new ol.View({
-          constrainResolution: true,
-          center: ol.proj.fromLonLat([4, 32]), // starting position [lng, lat]
-          zoom: 6 // starting zoom
+      }),
+      style: new ol.style.Style({
+        image: new ol.style.Icon({
+          src: 'https://docs.maptiler.com/openlayers/default-marker/marker-icon.png',
+          anchor: [0.5, 1]
         })
-      });
-
-      const ADRAR = new ol.layer.Vector({
-          source: new ol.source.Vector({
-              features: [
-                new ol.Feature({
-                  geometry: new ol.geom.Point(
-                    ol.proj.fromLonLat([-0.2880199, 27.8836448])
-                  )
-                })
-              ],
-          }),
-          style: new ol.style.Style({
-            image: new ol.style.Icon({
-              src: 'https://docs.maptiler.com/openlayers/default-marker/marker-icon.png',
-              anchor: [0.5, 1]
-            })
-          })
       })
+    })
 
-      const unites_territorial = new ol.layer.Vector({
-          source: new ol.source.Vector({
-             url: `https://api.maptiler.com/data/aa47845a-5cb7-47aa-9468-28024901e6b8/features.json?key=${key}`,
-             format: new ol.format.GeoJSON(),
-          })
+    const unites_territorial = new ol.layer.Vector({
+      source: new ol.source.Vector({
+        url: `https://api.maptiler.com/data/aa47845a-5cb7-47aa-9468-28024901e6b8/features.json?key=${key}`,
+        format: new ol.format.GeoJSON(),
       })
+    })
 
-      map.addLayer(ADRAR);
-      map.addLayer(unites_territorial);
-    </script>
-  </body>
+    map.addLayer(ADRAR);
+    map.addLayer(unites_territorial);
+  </script>
+</body>
+
 </html>
