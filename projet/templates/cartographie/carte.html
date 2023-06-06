@@ -3,8 +3,10 @@
   <head>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <title>Display a GeoJSON Layer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.2.2/ol.css">
-    <script src="https://cdn.jsdelivr.net/npm/ol@v7.2.2/dist/ol.js"></script>
+
+    <!--  you want to try out OpenLayers without downloading anything (not recommended for production) -->
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.4.0/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
     <style>
       #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
     </style>
@@ -41,24 +43,33 @@
         })
       });
 
-      const marker = ol.layer.Vector({
+      const ADRAR = new ol.layer.Vector({
           source: new ol.source.Vector({
               features: [
                 new ol.Feature({
                   geometry: new ol.geom.Point(
-                    ol.proj.fromLonLat([4, 32])
+                    ol.proj.fromLonLat([-0.2880199, 27.8836448])
                   )
                 })
               ],
           }),
           style: new ol.style.Style({
             image: new ol.style.Icon({
-              src: 'https://docs.maptiler.com/openlayers/default-marker/marker-icon.png'
+              src: 'https://docs.maptiler.com/openlayers/default-marker/marker-icon.png',
+              anchor: [0.5, 1]
             })
           })
       })
 
-      map.addLayer(marker);
+      const unites_territorial = new ol.layer.Vector({
+          source: new ol.source.Vector({
+             url: `https://api.maptiler.com/data/aa47845a-5cb7-47aa-9468-28024901e6b8/features.json?key=${key}`,
+             format: new ol.format.GeoJSON(),
+          })
+      })
+
+      map.addLayer(ADRAR);
+      map.addLayer(unites_territorial);
     </script>
   </body>
 </html>
