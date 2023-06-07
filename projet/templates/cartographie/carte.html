@@ -19,6 +19,9 @@
       bottom: 0;
       left: 0;
     }
+    body {
+      overflow: hidden;
+    }
   </style>
 </head>
 
@@ -26,6 +29,7 @@
   <div id="map">
     <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img
         src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
+        <img src="" alt="">
   </div>
   <script>
     const key = 'izsC4a5EZcD9ViO7PDvZ';
@@ -63,32 +67,27 @@
       })
     });
 
-    const ADRAR = new ol.layer.Vector({
+    const unites_territorial = new ol.layer.Vector({
       source: new ol.source.Vector({
-        features: [
-          new ol.Feature({
-            geometry: new ol.geom.Point(
-              ol.proj.fromLonLat([-0.2880199, 27.8836448])
-            )
-          })
-        ],
+        url: `./../../assets/static/emplacement_point_carte_JSON/directions_regional.geojson`,
+        format: new ol.format.GeoJSON()
       }),
       style: new ol.style.Style({
         image: new ol.style.Icon({
-          src: 'https://docs.maptiler.com/openlayers/default-marker/marker-icon.png',
-          anchor: [0.5, 1]
+          src: './../../assets/static/emplacement_point_carte_JSON/image_directions_regional.png',
+          anchor: [0.5, 1],
+          size: [512, 512],
+          scale: 0.05
         })
-      })
-    })
+      }),
+    });
 
-    const unites_territorial = new ol.layer.Vector({
-      source: new ol.source.Vector({
-        url: `https://api.maptiler.com/data/aa47845a-5cb7-47aa-9468-28024901e6b8/features.json?key=${key}`,
-        format: new ol.format.GeoJSON(),
-      })
-    })
 
-    map.addLayer(ADRAR);
+    function clique_unites_territorial() {
+      console.log("ok")
+    }
+    // map.events.register("click", unites_territorial,clique_unites_territorial);  
+
     map.addLayer(unites_territorial);
   </script>
 </body>

@@ -151,7 +151,7 @@ $connexion = connect_bd();
 
             <div id="map">
                 <iframe
-                    src="https://api.maptiler.com/maps/fa5d9a31-b618-4e90-8150-8b4266cee8e1/?key=izsC4a5EZcD9ViO7PDvZ#3.9/34.11775/5.42487"
+                    src="./cartographie/carte.html"
                     frameborder="0"></iframe>
             </div>
 

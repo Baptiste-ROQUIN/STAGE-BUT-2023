@@ -51,3 +51,12 @@ ajouter les video dans accueil
 menu_gauche + grand + background
 footer depliable
 faire marcher les fleche  pour actualités
+
+
+
+
+
+les 31 points pour les untites terr je les fait a la main ?
+Quelle autre carte je dois ajouter dans carto
+
+On peut changer les emplacement des point facilement

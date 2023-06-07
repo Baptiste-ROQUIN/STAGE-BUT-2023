@@ -284,11 +284,9 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 
 #map {
     z-index: 1;
-    width: 90%;
-    height: 90%;
     margin: auto;
 
-    height: 50vh;
+    height: 70vh;
     width: 80vw;
     background-color: rgba(50, 46, 47, 0.8);
 
@@ -299,6 +297,7 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 #map iframe {
     width: 95%;
     height: 95%;
+    cursor:grabbing
     
 }
 

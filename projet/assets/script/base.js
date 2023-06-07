@@ -158,6 +158,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     left: 0,
                     behavior: "smooth"
                 })
+            });
+            newContent.addEventListener('scroll', () => {
+                if (0 < titre.getBoundingClientRect().top < 400) {
+                    titre.style.opacity = "1"
+                }
+                else titre.style.opacity = "0.5"
             })
             menu_nav.appendChild(newContent);
         };
