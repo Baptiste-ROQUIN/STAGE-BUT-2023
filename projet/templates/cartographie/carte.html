@@ -82,6 +82,15 @@
       }),
     });
 
+    let algerie =  new ol.layer.Vector({
+      source: new ol.source.Vector({
+        url:'http://localhost:8080/geoserver/edt_stage/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=edt_stage%3Acommunes_algerie&maxFeatures=50&outputFormat=application/json',
+        format: new ol.format.GeoJSON(),
+        attribution: '@geoserver',
+        crossOrigin: 'anonymous'
+      })
+    })
+
 
     function clique_unites_territorial() {
       console.log("ok")
@@ -89,6 +98,7 @@
     // map.events.register("click", unites_territorial,clique_unites_territorial);  
 
     map.addLayer(unites_territorial);
+    map.addLayer(algerie);
   </script>
 </body>
 
