@@ -11,95 +11,74 @@
     -->
   <script src="./../../assets/static/open_layer/dist/ol.js"></script>
   <link rel="stylesheet" href="./../../assets/static/open_layer/ol.css">
+  <script src="./../../assets/script/carte.js" language="JavaScript" ></script>
   <style>
     #map {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
-      left: 0;
+      
+
+      width: 80%;
     }
+
+    #layerMap {
+      width: 20%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
     body {
       overflow: hidden;
     }
+/* 
+    .map .ol-custom-overviewmap,
+      .map .ol-custom-overviewmap.ol-uncollapsible {
+        bottom: auto;
+        left: auto;
+        right: 0;
+        top: 0;
+      }
+
+      .map .ol-custom-overviewmap:not(.ol-collapsed)  {
+        border: 1px solid black;
+      }
+
+      .map .ol-custom-overviewmap .ol-overviewmap-map {
+        border: none;
+        width: 300px;
+      }
+
+      .map .ol-custom-overviewmap .ol-overviewmap-box {
+        border: 2px solid red;
+      }
+
+      .map .ol-custom-overviewmap:not(.ol-collapsed) button{
+        bottom: auto;
+        left: auto;
+        right: 1px;
+        top: 1px;
+      }
+
+      .map .ol-rotate {
+        top: 170px;
+        right: 0;
+      } */
   </style>
 </head>
 
 <body>
+  <!-- on fait une liste des layer avec des checkbox
+    si cocher on affiche le layer
+    si decocher on cache le layer -->
+  <div id="layerMap"></div>
   <div id="map">
-    <a href="https://www.maptiler.com" style="position:absolute;left:10px;bottom:10px;z-index:999;"><img
+    <a href="https://www.maptiler.com" style="position:absolute;left:50px;bottom:10px;z-index:0;"><img
         src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
-        <img src="" alt="">
+    <img src="" alt="">
   </div>
-  <script>
-    const key = 'izsC4a5EZcD9ViO7PDvZ';
-
-    const attribution = new ol.control.Attribution({
-      collapsible: false,
-    });
-
-    const source = new ol.source.TileJSON({
-      url: `https://api.maptiler.com/maps/streets-v2/tiles.json?key=${key}`, // source URL
-      tileSize: 512,
-      crossOrigin: 'anonymous'
-    });
-
-    // const map = new ol.Map({
-    // layers: [
-    //   new ol.layer.Tile({
-    //     source: source
-    //   })
-    // ],
-    // controls: ol.control.defaults.defaults({ attribution: false }).extend([attribution]),
-    // target: 'map',
-
-    var map = new ol.Map({
-      target: 'map',
-      layers: [
-        new ol.layer.Tile({
-          source: new ol.source.OSM()
-        })
-      ],
-      view: new ol.View({
-        constrainResolution: true,
-        center: ol.proj.fromLonLat([4, 32]), // starting position [lng, lat]
-        zoom: 6 // starting zoom
-      })
-    });
-
-    const unites_territorial = new ol.layer.Vector({
-      source: new ol.source.Vector({
-        url: `./../../assets/static/emplacement_point_carte_JSON/directions_regional.geojson`,
-        format: new ol.format.GeoJSON()
-      }),
-      style: new ol.style.Style({
-        image: new ol.style.Icon({
-          src: './../../assets/static/emplacement_point_carte_JSON/image_directions_regional.png',
-          anchor: [0.5, 1],
-          size: [512, 512],
-          scale: 0.05
-        })
-      }),
-    });
-
-    let algerie =  new ol.layer.Vector({
-      source: new ol.source.Vector({
-        url:'http://localhost:8080/geoserver/edt_stage/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=edt_stage%3Acommunes_algerie&maxFeatures=50&outputFormat=application/json',
-        format: new ol.format.GeoJSON(),
-        attribution: '@geoserver',
-        crossOrigin: 'anonymous'
-      })
-    })
-
-
-    function clique_unites_territorial() {
-      console.log("ok")
-    }
-    // map.events.register("click", unites_territorial,clique_unites_territorial);  
-
-    map.addLayer(unites_territorial);
-    map.addLayer(algerie);
-  </script>
+  <!-- <div><label><input type="checkbox" id="rotateWithView"> Rotate with view</label></div> -->
 </body>
 
 </html>
