@@ -9,58 +9,6 @@ const header = {
   },
 };
 
-// response = fetch(url_all_layer, header)
-//   .then()
-//   .then(response => console.log(response))
-//   .catch(err => console.error(err));
-
-
-
-
-
-// source (mis séparement pour pouvoir les sauvegarder)
-let source_layer = new ol.source.Vector({
-  url: `http://localhost:8080/geoserver/edt_stage/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=edt_stage%3A${key}&outputFormat=application/json`,
-  format: new ol.format.GeoJSON(),
-  // attribution: '@geoserver',
-  // crossOrigin: 'anonymous'
-});
-
-
-// variable de couches
-let layer = new ol.layer.Vector({
-  source: null
-});
-
-// let algeria_administrative = new ol.layer.Vector({
-//   source: new ol.source.Vector({
-//     url: 'http://localhost:8080/geoserver/edt_stage/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=edt_stage%3Aalgeria_administrative&outputFormat=application/json',
-//     format: new ol.format.GeoJSON(),
-//     attribution: '@geoserver',
-//     crossOrigin: 'anonymous'
-//   })
-// });
-
-
-// const rotateWithView = document.getElementById('rotateWithView');
-
-// const overviewMapControl = new ol.control.OverviewMap({
-//   // see in overviewmap-custom.html to see the custom CSS used
-//   className: 'ol-overviewmap ol-custom-overviewmap',
-//   layers: [
-//     new ol.layer.Tile({
-//       source: new ol.source.OSM(),
-//     }),
-//   ],
-//   collapseLabel: '\u00BB',
-//   label: '\u00AB',
-//   collapsed: false,
-// });
-
-// rotateWithView.addEventListener('change', function () {
-//   overviewMapControl.setRotateWithView(this.checked);
-// });
-
 function afficherLayer(checkbox, source, layer) {
   if (checkbox.checked) layer.setSource(source);
   else layer.setSource(null);
@@ -69,18 +17,19 @@ function afficherLayer(checkbox, source, layer) {
 
 function creationMenuAffichageLayers(layer, source, nomLayer) {
   // création du bouton pour gérer l'affichage
-  const id_layerMap = document.getElementById('layerMap');
-  let newContent = document.createElement('input');
-  newContent.setAttribute("type", "checkbox");
-  newContent.setAttribute("id", nomLayer);
-  newContent.addEventListener('click', () => {
-    afficherLayer(newContent, source, layer)
+  let divNewContent = document.createElement('div');
+  let inputNewContent = document.createElement('input');
+  inputNewContent.setAttribute("type", "checkbox");
+  inputNewContent.setAttribute("id", nomLayer);
+  inputNewContent.addEventListener('click', () => {
+    afficherLayer(inputNewContent, source, layer)
   });
   let labelNewContent = document.createElement('label');
   labelNewContent.innerHTML = nomLayer;
   labelNewContent.setAttribute("id", nomLayer)
-  id_layerMap.appendChild(newContent);
-  id_layerMap.appendChild(labelNewContent);
+  divNewContent.appendChild(inputNewContent);
+  divNewContent.appendChild(labelNewContent);
+  document.getElementById('layerMap').appendChild(divNewContent);
 }
 
 async function truc(map) {
@@ -90,7 +39,7 @@ async function truc(map) {
     response = response.json();
     response.then(
       response => {
-      
+
         for (let info_layer of response.featureTypes.featureType) {
           let source = new ol.source.Vector({
             url: `http://localhost:8080/geoserver/edt_stage/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=edt_stage%3A${info_layer.name}&outputFormat=application/json`,
@@ -113,7 +62,17 @@ async function truc(map) {
 
 
 function createMap() {
+  const source = new ol.source.OSM();
+  const overviewMapControl = new ol.control.OverviewMap({
+    layers: [
+      new ol.layer.Tile({
+        source: source,
+      }),
+    ],
+  });
+
   var map = new ol.Map({
+    controls: ol.control.defaults.defaults().extend([overviewMapControl]),
     target: 'map',
     layers: [
       new ol.layer.Tile({
