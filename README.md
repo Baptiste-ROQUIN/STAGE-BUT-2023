@@ -2,20 +2,8 @@
 Stage du 15 avril au 15 juin 2023
 Refonte du site web http://anrh.dz/
 
-## Consigne
-    - Pouvoir trouver tout ce qu'on cherche dans la page d'acceuil
-    - Faire un design agréable
-    - WEB DESIGN
+## Consigne d'installation WINDOWS
 
-## Design
-### Template (fond)
-    - Image + blur
-    - image + vague
-    - Dégrader
-
-### Organisation accueil
-    - header avec reseaux sociaux + choix langue
-    - Menu static
-    - a gauche menu depliant pour actus ou descr missions
-    - 5 bulle afin de naviguer facilement dans les pages
-    - Juste en dessous la carte
+### Pour faire marcher le site :
+    + installer un serveur PHP (dans cette exemple je prendrais XAMPP)
+    + 
