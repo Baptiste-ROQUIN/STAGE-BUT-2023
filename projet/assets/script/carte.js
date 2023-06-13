@@ -32,7 +32,7 @@ function creationMenuAffichageLayers(layer, source, nomLayer) {
   document.getElementById('layerMap').appendChild(divNewContent);
 }
 
-async function truc(map) {
+async function rechercheLayerGeoserver(map) {
   let response = await fetch(url_all_layer, header);
   if (response.ok) { // if HTTP-status is 200-299
     // obtenir le corps de réponse (la méthode expliquée ci-dessous)
@@ -93,7 +93,7 @@ function createMap() {
 // une fois que la page est bien charger on execute le code suivant 
 document.addEventListener('DOMContentLoaded', function () {
   var map = createMap();
-  truc(map);
+  rechercheLayerGeoserver(map);
   // map.addLayer(algeria_administrative);
 
 

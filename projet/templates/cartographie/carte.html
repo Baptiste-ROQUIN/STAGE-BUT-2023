@@ -11,14 +11,14 @@
     -->
   <script src="./../../assets/static/open_layer/dist/ol.js"></script>
   <link rel="stylesheet" href="./../../assets/static/open_layer/ol.css">
-  <script src="./../../assets/script/carte.js" language="JavaScript" ></script>
+  <script src="./../../assets/script/carte.js" language="JavaScript"></script>
   <style>
     #map {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
-      
+
 
       width: 80%;
     }
@@ -38,55 +38,23 @@
     body {
       overflow: hidden;
     }
-/* 
-    .map .ol-custom-overviewmap,
-      .map .ol-custom-overviewmap.ol-uncollapsible {
-        bottom: auto;
-        left: auto;
-        right: 0;
-        top: 0;
-      }
-
-      .map .ol-custom-overviewmap:not(.ol-collapsed)  {
-        border: 1px solid black;
-      }
-
-      .map .ol-custom-overviewmap .ol-overviewmap-map {
-        border: none;
-        width: 300px;
-      }
-
-      .map .ol-custom-overviewmap .ol-overviewmap-box {
-        border: 2px solid red;
-      }
-
-      .map .ol-custom-overviewmap:not(.ol-collapsed) button{
-        bottom: auto;
-        left: auto;
-        right: 1px;
-        top: 1px;
-      }
-
-      .map .ol-rotate {
-        top: 170px;
-        right: 0;
-      } */
   </style>
 </head>
 
 <body>
-  <!-- on fait une liste des layer avec des checkbox
-    si cocher on affiche le layer
-    si decocher on cache le layer -->
+
   <div id="layerMap">
     <h1>LAYERS</h1>
+    <!-- on fait une liste des layer avec des checkbox
+    si cocher on affiche le layer
+    si decocher on cache le layer 
+    CREE EN JS-->
   </div>
   <div id="map">
     <a href="https://www.maptiler.com" style="position:absolute;left:50px;bottom:10px;z-index:0;"><img
         src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
     <img src="" alt="">
   </div>
-  <!-- <div><label><input type="checkbox" id="rotateWithView"> Rotate with view</label></div> -->
 </body>
 
 </html>

@@ -1,6 +1,8 @@
 <?php
+
 require_once('../bd/connexion.php');
 require_once('../bd/les_classes.php');
+session_start();
 $connexion = connect_bd();
 ?>
 
@@ -120,14 +122,17 @@ $connexion = connect_bd();
                     if ($stmt_news->rowCount() == 0)
                         echo "Il n'existe aucune news <br/>";
                     else {
+                        $_SESSION['class_news'] = [];
                         foreach ($stmt_news as $row_news) {
                             $class_news = new NEWS($row_news);
+                            array_push($_SESSION['class_news'], $class_news);
 
+                            echo '<script>console.log("class : '.$class_news->toString().'")</script>';
                             echo '<section class="article">';
                             echo '<img src="' . $class_news->getImageNews() . '" alt="' . $class_news->getImageNews() . '">';
                             echo '<h2>' . $class_news->getExtraitTitreNews() . '</h2>';
                             echo '<p>' . $class_news->getExtraitTextNews() . ' </p>';
-                            echo '<a href="">Lire la suite →</a>';
+                            echo '<a href="./page_solo/news.php?id='. $class_news->getIdNews() .'">Lire la suite →</a>';
                             echo '</section>';
                         }
                     }

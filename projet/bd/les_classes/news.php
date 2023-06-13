@@ -34,7 +34,7 @@ class NEWS
     {
         return $this->dateNews;
     }
-    function geTextNews()
+    function getTextNews()
     {
         return $this->textNews;
     }
@@ -49,6 +49,10 @@ class NEWS
     {
         $extrait = substr($this->titreNews, 0, 75) . '...';
         return $extrait;
+    }
+
+    function toString() {
+        return 'Bonsoir je suis'.  $this->getIdNews();
     }
 
 }

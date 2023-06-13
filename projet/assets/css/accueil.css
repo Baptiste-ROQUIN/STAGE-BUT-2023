@@ -84,8 +84,9 @@ main>img {
 .titre>h1 {
     font-size: 3.5em;
     margin-bottom: 2vh;
-    margin-top: 0vh ;
+    margin-top: 0vh;
 }
+
 .titre>.barre_jaune_titre {
     width: 10vw;
     height: 0.2vh;
@@ -99,8 +100,9 @@ main>img {
     margin: auto;
     cursor: pointer;
 }
+
 .gauche {
-    transform : rotate(-180deg);
+    transform: rotate(-180deg);
 }
 
 
@@ -141,12 +143,15 @@ section.nos_missions>div>a {
     border-radius: 30px;
     transition: 500ms;
 }
+
 section.nos_missions>div>a:hover {
     font-size: 1.8em;
 }
 
 
-section.nos_missions>div>a>p {margin: 1vh auto;}
+section.nos_missions>div>a>p {
+    margin: 1vh auto;
+}
 
 .decoration_mission {
     width: 100vw;
@@ -155,7 +160,7 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     /* Pas nécessaire mais evite qu'il y ai un petit bout de blanc inutile*/
     position: relative;
     top: -1px;
-    
+
 }
 
 /* Services */
@@ -168,6 +173,11 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 }
 
 .presentation_services {
+    overflow: hidden;
+    position: relative;
+
+    z-index: 0;
+
     width: 15vw;
     height: 20vh;
     padding: 1vh;
@@ -182,28 +192,66 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     color: black;
 }
 
+.presentation_services::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #B0C4DE;
+    border-radius: 50% 50% 0% 0%;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.presentation_services:hover::before {
+    top: 0px;
+    border-radius: 0;
+}
+
 .presentation_services:hover {
-    background-color: #B0C4DE;
     color: white;
 }
 
 .presentation_services>div {
-    width:35%;
+    width: 35%;
     height: 45%;
     background-repeat: no-repeat;
     background-size: contain;
 }
-#protocoles {background-image: url(./../image/accueil/services/protocoles_base.png);}
-.presentation_services:hover #protocoles {background-image: url(./../image/accueil/services/protocoles_blanc.png);}
 
-#devis {background-image: url(./../image/accueil/services/devis_base.png);}
-.presentation_services:hover #devis {background-image: url(./../image/accueil/services/devis_blanc.png);}
+#protocoles {
+    background-image: url(./../image/accueil/services/protocoles_base.png);
+}
 
-#appel_offre {background-image: url(./../image/accueil/services/appel_doffre_base.png);}
-.presentation_services:hover #appel_offre {background-image: url(./../image/accueil/services/appel_doffre_blanc.png);}
+.presentation_services:hover #protocoles {
+    background-image: url(./../image/accueil/services/protocoles_blanc.png);
+}
 
-#que_faisons_nous {background-image: url(./../image/accueil/services/que_faisons_nous_base.png);}
-.presentation_services:hover #que_faisons_nous {background-image: url(./../image/accueil/services/que_faisons_nous_blanc.png);}
+#devis {
+    background-image: url(./../image/accueil/services/devis_base.png);
+}
+
+.presentation_services:hover #devis {
+    background-image: url(./../image/accueil/services/devis_blanc.png);
+}
+
+#appel_offre {
+    background-image: url(./../image/accueil/services/appel_doffre_base.png);
+}
+
+.presentation_services:hover #appel_offre {
+    background-image: url(./../image/accueil/services/appel_doffre_blanc.png);
+}
+
+#que_faisons_nous {
+    background-image: url(./../image/accueil/services/que_faisons_nous_base.png);
+}
+
+.presentation_services:hover #que_faisons_nous {
+    background-image: url(./../image/accueil/services/que_faisons_nous_blanc.png);
+}
 
 
 
@@ -271,8 +319,9 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     margin-top: 5vh;
     margin-bottom: -5px;
 }
+
 #en_bas {
-    transform : rotate(180deg);
+    transform: rotate(180deg);
 }
 
 .vague {
@@ -297,8 +346,7 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 #map iframe {
     width: 95%;
     height: 95%;
-    cursor:grabbing
-    
+    cursor: grabbing
 }
 
 .les_boutons_info {
@@ -320,7 +368,7 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
 
 }
 
-.bouton_info .titre{
+.bouton_info .titre {
     font-weight: bold;
 }
 
@@ -352,6 +400,7 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     display: flex;
     justify-content: space-around;
 }
+
 .partenaires>a {
 
     transition: 300ms;
@@ -385,7 +434,7 @@ section.nos_missions>div>a>p {margin: 1vh auto;}
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-    
+
 }
 
 .galerie h3 {
@@ -470,26 +519,31 @@ a.bouton_services:hover::before {
         font-size: 0.8em;
     }
 }
+
 @media screen and (max-width: 1050px) {
     body {
         font-size: 0.7em;
     }
 }
+
 @media screen and (max-width: 870px) {
     body {
         font-size: 0.6em;
     }
 }
+
 @media screen and (max-width: 750px) {
     body {
         font-size: 0.5em;
     }
 }
+
 @media screen and (max-width: 550px) {
     body {
         font-size: 0.4em;
     }
 }
+
 @media screen and (max-width: 450px) {
     body {
         font-size: 0.2em;
