@@ -31,14 +31,22 @@ function creationMenuAffichageLayers(layer, source, nomLayer) {
   document.getElementById('layerMap').appendChild(divNewContent);
 }
 
-
-function ajouterEvenementChangerBasemap(layer, radioBut) {
-  if (radioBut.checked) {
-    layer.setVisible(true);
-    console.log('le layer cocher est : ' + layer.get('title'))
-  } else {
-    layer.setVisible(false);
+function majMap(listeLayer) {
+  let layerTitleToSelect = null
+  let radioButtons = document.getElementsByName('basemap_item')
+  for (let radBut of radioButtons){
+    if (radBut.checked) {
+      layerTitleToSelect = radBut.id
+    }
   }
+
+  for (let layer of listeLayer){
+    let layerTitle = layer.get('title')
+    layer.setVisible(layerTitle == layerTitleToSelect)
+  }
+
+
+
 }
 
 function creationBasemap(listeLayer) {
@@ -51,15 +59,10 @@ function creationBasemap(listeLayer) {
     inputNewContent.setAttribute("id", layer.get('title'));
     inputNewContent.setAttribute("name", "basemap_item");
     labelNewContent.setAttribute("for", layer.get('title'));
+    inputNewContent.onclick = function(){
+      majMap(listeLayer)
+    };
     labelNewContent.innerHTML = layer.get('title');
-
-
-    inputNewContent.addEventListener('change', () => {
-      console.log(layer.get('title'))
-      ajouterEvenementChangerBasemap(layer, inputNewContent);
-      
-    });
-    console.log("nom lors de la crea " + layer.get('title'))
     divNewContent.appendChild(inputNewContent);
     divNewContent.appendChild(labelNewContent);
     document.getElementById('basemap').appendChild(divNewContent);
