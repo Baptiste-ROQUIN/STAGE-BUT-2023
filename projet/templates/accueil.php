@@ -126,8 +126,6 @@ $connexion = connect_bd();
                         foreach ($stmt_news as $row_news) {
                             $class_news = new NEWS($row_news);
                             array_push($_SESSION['class_news'], $class_news);
-
-                            echo '<script>console.log("class : '.$class_news->toString().'")</script>';
                             echo '<section class="article">';
                             echo '<img src="' . $class_news->getImageNews() . '" alt="' . $class_news->getImageNews() . '">';
                             echo '<h2>' . $class_news->getExtraitTitreNews() . '</h2>';

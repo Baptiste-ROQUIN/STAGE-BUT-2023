@@ -25,9 +25,6 @@ function afficher_n_enfant(start, liste_a_afficher, n=5){
     var end = (start+n)%liste_a_afficher.length;
     if (start < -1 ) start += liste_a_afficher.length;
 
-
-    console.log("start = "+ start + "; end = " + end + "; cpt = " + cpt)
-
     for (let index = 0; index < liste_a_afficher.length; index++) {
         const un_domaine = liste_a_afficher[index];
 

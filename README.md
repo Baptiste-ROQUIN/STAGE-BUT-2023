@@ -24,3 +24,7 @@ Refonte du site web http://anrh.dz/
 ### <center> **Créer sa base de donnée POSTGRESQL** </center>
 
 ### <center> **Installer QGIS, PG ADMIN4 & geoserver** </center>
+
+# PAS FAIT
+    + chargement du layer mettre un animation sur la carte
+    + 

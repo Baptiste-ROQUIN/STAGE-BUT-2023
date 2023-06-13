@@ -20,16 +20,20 @@
       bottom: 0;
 
 
-      width: 80%;
+      width: 80vw;
+      height: 95vh;
     }
 
     #layerMap {
-      width: fit-content;
+      width: 17vw;
+      height: 95vh;
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
+      justify-content: top;
+
       background-color: #EEEEFF;
-      padding: 1vh 1vw;
+      padding: 1vh 0.5vw;
 
       border: solid;
       border-radius: 15px;
@@ -38,22 +42,40 @@
     body {
       overflow: hidden;
     }
+
+    #layerMap input {
+      cursor: pointer;
+    }
+
+    #basemap {
+      position: absolute;
+      right: 50px;
+      top: 5vh;
+      z-index: 5;
+      background-color: aliceblue;
+      padding: 10px;
+      border-radius: 15px;
+      flex-direction: column;
+    }
   </style>
 </head>
 
 <body>
 
   <div id="layerMap">
-    <h1>LAYERS</h1>
+    <h1>COUCHES</h1>
     <!-- on fait une liste des layer avec des checkbox
     si cocher on affiche le layer
     si decocher on cache le layer 
     CREE EN JS-->
   </div>
   <div id="map">
-    <a href="https://www.maptiler.com" style="position:absolute;left:50px;bottom:10px;z-index:0;"><img
-        src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
+    <a href="https://www.maptiler.com" style="position:absolute;left:50px;bottom:10px;z-index:0;">
+      <img src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
     <img src="" alt="">
+    <div id="basemap">
+    </div>
+
   </div>
 </body>
 

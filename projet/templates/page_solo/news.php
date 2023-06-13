@@ -45,16 +45,7 @@ session_start();
         background: linear-gradient(#B0C4DE, #B0C4DE,  white);
     }
 
-    .article div {
-        display: flex
-    }
-    .article div>* {
-        margin: 1vh 2vw;
-    }
 
-    .article div>* {
-        margin: 1vh 2vw;
-    }
 </style>
 
 </html>

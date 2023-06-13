@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const les_h2 = document.getElementsByTagName('h2');
     let menu_nav = document.querySelector('.menu_navigation');
-    console.log(menu_nav)
     for (let titre of les_h2) {
         let newContent = document.createElement('a')
         if (titre.textContent.length > 30) {

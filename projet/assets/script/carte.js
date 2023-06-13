@@ -12,7 +12,6 @@ const header = {
 function afficherLayer(checkbox, source, layer) {
   if (checkbox.checked) layer.setSource(source);
   else layer.setSource(null);
-  console.log(checkbox.checked)
 }
 
 function creationMenuAffichageLayers(layer, source, nomLayer) {
@@ -26,10 +25,45 @@ function creationMenuAffichageLayers(layer, source, nomLayer) {
   });
   let labelNewContent = document.createElement('label');
   labelNewContent.innerHTML = nomLayer;
-  labelNewContent.setAttribute("id", nomLayer)
+  labelNewContent.setAttribute("for", nomLayer)
   divNewContent.appendChild(inputNewContent);
   divNewContent.appendChild(labelNewContent);
   document.getElementById('layerMap').appendChild(divNewContent);
+}
+
+
+function ajouterEvenementChangerBasemap(layer, radioBut) {
+  if (radioBut.checked) {
+    layer.setVisible(true);
+    console.log('le layer cocher est : ' + layer.get('title'))
+  } else {
+    layer.setVisible(false);
+  }
+}
+
+function creationBasemap(listeLayer) {
+  let divNewContent = document.createElement('div');
+  for (var layer of listeLayer) {
+    let inputNewContent = document.createElement('input');
+    let labelNewContent = document.createElement('label');
+    if (layer.get('title') == 'Base') inputNewContent.checked = true;
+    inputNewContent.setAttribute("type", "radio");
+    inputNewContent.setAttribute("id", layer.get('title'));
+    inputNewContent.setAttribute("name", "basemap_item");
+    labelNewContent.setAttribute("for", layer.get('title'));
+    labelNewContent.innerHTML = layer.get('title');
+
+
+    inputNewContent.addEventListener('change', () => {
+      console.log(layer.get('title'))
+      ajouterEvenementChangerBasemap(layer, inputNewContent);
+      
+    });
+    console.log("nom lors de la crea " + layer.get('title'))
+    divNewContent.appendChild(inputNewContent);
+    divNewContent.appendChild(labelNewContent);
+    document.getElementById('basemap').appendChild(divNewContent);
+  }
 }
 
 async function rechercheLayerGeoserver(map) {
@@ -61,7 +95,7 @@ async function rechercheLayerGeoserver(map) {
 
 
 
-function createMap() {
+function createMap(layerGroup) {
   const source = new ol.source.OSM();
   const overviewMapControl = new ol.control.OverviewMap({
     layers: [
@@ -74,11 +108,7 @@ function createMap() {
   var map = new ol.Map({
     controls: ol.control.defaults.defaults().extend([overviewMapControl]),
     target: 'map',
-    layers: [
-      new ol.layer.Tile({
-        source: new ol.source.OSM()
-      })
-    ],
+    layers: [layerGroup],
     view: new ol.View({
       constrainResolution: true,
       center: ol.proj.fromLonLat([4, 32]), // starting position [lng, lat]
@@ -92,10 +122,29 @@ function createMap() {
 
 // une fois que la page est bien charger on execute le code suivant 
 document.addEventListener('DOMContentLoaded', function () {
-  var map = createMap();
-  rechercheLayerGeoserver(map);
-  // map.addLayer(algeria_administrative);
+  const layerGroup = new ol.layer.Group({
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM(),
+        title: "Base",
+        visible: true
+      }),
 
+      new ol.layer.Tile({
+        source: new ol.source.XYZ({
+          url: 'https://stamen-tiles.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg',
+          attributions: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+        }),
+        visible: false,
+        title: "Satellite"
+      }),
+    ],
+  });
+
+  var map = createMap(layerGroup);
+  rechercheLayerGeoserver(map);
+  const listeLayer = layerGroup.getLayers()["array_"];
+  creationBasemap(listeLayer);
 
 
 
