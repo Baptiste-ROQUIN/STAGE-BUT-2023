@@ -15,7 +15,6 @@ session_start();
 
 <body>
     <section class="intro">
-        <img src="./../../assets/image/agence/image_vector.png" alt="">
         <div>
             <h1>NEWS</h1>
             <div class="barre_jaune"></div>
@@ -28,17 +27,34 @@ session_start();
 
             if ($news->getIdNews() == htmlspecialchars($_GET['id'])) {
                 echo '<section class="article">';
-                echo '<img src="../' . $news->getImageNews() . '" alt="' . $news->getImageNews() . '">';
                 echo '<h2>' . $news->getTitreNews() . '</h2>';
-                echo '<p>' . $news->getTextNews() . ' </p>';
+                echo '<div>';
+                echo '<img src="../' . $news->getImageNews() . '" alt="' . $news->getImageNews() . '">';
+                echo '<p class="sous_conteneur">' . $news->getTextNews() . ' </p>';
+                echo '<div>';
                 echo '</section>';
             }
         }
-
-
         ?>
 
     </main>
 </body>
+
+<style>
+    .intro {
+        background: linear-gradient(#B0C4DE, #B0C4DE,  white);
+    }
+
+    .article div {
+        display: flex
+    }
+    .article div>* {
+        margin: 1vh 2vw;
+    }
+
+    .article div>* {
+        margin: 1vh 2vw;
+    }
+</style>
 
 </html>

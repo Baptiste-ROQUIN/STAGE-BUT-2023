@@ -121,3 +121,26 @@ h2 {
 img {
     width: 20vw;
 }
+
+/* page_solo/news */
+.article div {
+    display: flex
+}
+.article div>* {
+    margin: 1vh 2vw;
+}
+
+.article div>* {
+    margin: 1vh 2vw;
+    height: auto;
+}
+
+.article div>p {
+    width: 40vw;
+    line-height: 1.5em;
+}
+
+.article div>img {
+    width: auto;
+    height: 35vh;
+}
