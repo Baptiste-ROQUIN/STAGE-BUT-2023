@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Display a GeoJSON Layer</title>
+
+  <!--  you want to try out OpenLayers without downloading anything (not recommended for production) 
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.4.0/dist/ol.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.4.0/ol.css">
+    -->
+  <script src="./../../assets/static/open_layer/dist/ol.js"></script>
+  <link rel="stylesheet" href="./../../assets/static/open_layer/ol.css">
+  <script src="./../../assets/script/carte.js" language="JavaScript"></script>
+  <style>
+    #map {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+
+      width: 80%;
+    }
+
+    #layerMap {
+      width: fit-content;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      background-color: #EEEEFF;
+      padding: 1vh 1vw;
+
+      border: solid;
+      border-radius: 15px;
+    }
+
+    body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="layerMap">
+    <h1>LAYERS</h1>
+    <!-- on fait une liste des layer avec des checkbox
+    si cocher on affiche le layer
+    si decocher on cache le layer 
+    CREE EN JS-->
+  </div>
+  <div id="map">
+    <a href="https://www.maptiler.com" style="position:absolute;left:50px;bottom:10px;z-index:0;"><img
+        src="https://api.maptiler.com/resources/logo.svg" alt="MapTiler logo"></a>
+    <img src="" alt="">
+  </div>
+</body>
+
+</html>

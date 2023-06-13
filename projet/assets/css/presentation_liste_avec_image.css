@@ -1,0 +1,37 @@
+body {
+    background-color: #EEEEFF;
+}
+
+main {
+    background-color: #EEEEFF;
+}
+
+#presentation {
+    background-image: url(./../image/activites/projet/projet_image_presentation.png);
+    width: 65vw;
+    height: 35vh;
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#presentation>p {
+    margin: auto 2vw;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+
+.presentation_avec_image {
+    display: flex;
+    justify-content: space-around;
+}
+
+.presentation_avec_image>div {
+    width: 40vw;
+}
+
+.presentation_avec_image>img {
+    width: 20vw;
+}

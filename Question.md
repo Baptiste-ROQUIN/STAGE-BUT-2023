@@ -18,3 +18,45 @@ A rien c'est un truc copier
 ## Je peux deplacer pluviometrie dans la partie 'NOS MISSIONS' ?
 
 ## Protocole de quoi ?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IFRAME
+BD + php
+
+
+
+Dans le rapport de stage ANRH ?
+
+
+agrandir la largeur du menu a gauche
+reduire taille titre
+
+
+faire des carte pour intro + cartographie
+
+ajouter les video dans accueil
+menu_gauche + grand + background
+footer depliable
+faire marcher les fleche  pour actualités
+
+
+
+
+
+les 31 points pour les untites terr je les fait a la main ?
+Quelle autre carte je dois ajouter dans carto
+
+On peut changer les emplacement des point facilement

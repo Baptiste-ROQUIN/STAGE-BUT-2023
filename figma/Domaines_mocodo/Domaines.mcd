@@ -1,0 +1,11 @@
+:
+DOMAINE : id, surnom, image, text
+:
+
+:
+NEWS : idNews, imageNews, titreNews, dateNews, texteNews
+:
+
+:
+DIRECTIONS : nom, adresse, tel, fax, mail
+:

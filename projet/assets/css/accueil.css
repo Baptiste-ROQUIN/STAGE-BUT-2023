@@ -4,7 +4,12 @@ body {
     margin: 0%;
     padding: 0%;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1em;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* PAGE D'INTRO */
@@ -14,24 +19,26 @@ section.page_intro {
     text-align: center;
     width: 100vw;
     height: 100vh;
+    top: 0px;
+
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
-    background-image: url(../image/accueil/riviere_fond.jpg);
+    background-image: url(../image/accueil/page_intro/riviere_fond.jpg);
 }
 
 section.page_intro>img#presentation_logo {
-    margin: 5vh auto;
-    width: 22vw;
+    margin: 7vh auto 2vh auto;
+    width: 18vw;
     height: auto;
 }
 
 section.page_intro>img#presentation_descendre {
     margin: auto;
-    width: 20vw;
+    width: 18vw;
     height: auto;
     position: absolute;
     bottom: 0;
-    left: 40vw;
+    left: 41vw;
 }
 
 section.page_intro>img#presentation_descendre:hover {
@@ -53,15 +60,402 @@ div.barre_jaune {
 
 section.page_intro>h2 {
     width: 50vw;
-    margin: 2vh auto ;
+    margin: 2vh auto;
+    font-size: 1.6em;
 }
 
 /* MAIN */
 
 main {
     width: 100vw;
-    height: 100vh;
 }
+
+main>img {
+    width: 100vw;
+}
+
+
+/* Commun */
+
+.titre {
+    margin: auto;
+}
+
+.titre>h1 {
+    font-size: 3.5em;
+    margin-bottom: 2vh;
+    margin-top: 0vh;
+}
+
+.titre>.barre_jaune_titre {
+    width: 10vw;
+    height: 0.2vh;
+    background-color: #FCCC10;
+    margin: 3vh auto;
+}
+
+.fleche {
+    width: 3vw;
+    height: 5vh;
+    margin: auto;
+    cursor: pointer;
+}
+
+.gauche {
+    transform: rotate(-180deg);
+}
+
+
+/* NOS MISSIONS */
+
+main>section.nos_missions {
+    background: linear-gradient(white, #B0C4DE);
+    height: 35vh;
+    display: flex;
+}
+
+section.nos_missions>p {
+    width: 45%;
+    font-size: 1.6em;
+    text-align: left;
+}
+
+section.nos_missions>div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section.nos_missions>div>h2 {
+    font-size: 3.5em;
+}
+
+section.nos_missions>div>a {
+    width: 30%;
+    height: 15%;
+    margin: auto;
+    padding: auto;
+    font-size: 1.6em;
+    color: white;
+    background-color: #B0C4DE;
+    border: solid #B0C4DE;
+    border-radius: 30px;
+    transition: 500ms;
+}
+
+section.nos_missions>div>a:hover {
+    font-size: 1.8em;
+}
+
+
+section.nos_missions>div>a>p {
+    margin: 1vh auto;
+}
+
+.decoration_mission {
+    width: 100vw;
+    z-index: -1;
+
+    /* Pas nécessaire mais evite qu'il y ai un petit bout de blanc inutile*/
+    position: relative;
+    top: -1px;
+
+}
+
+/* Services */
+
+.services {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    width: 89vw;
+}
+
+.presentation_services {
+    overflow: hidden;
+    position: relative;
+
+    z-index: 0;
+
+    width: 15vw;
+    height: 20vh;
+    padding: 1vh;
+    margin: 1vw;
+    text-align: left;
+    border: 3px solid white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transition: 0.5s;
+
+    /* relatif au a*/
+    text-decoration: none;
+    color: black;
+}
+
+.presentation_services::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #B0C4DE;
+    border-radius: 50% 50% 0% 0%;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.presentation_services:hover::before {
+    top: 0px;
+    border-radius: 0;
+}
+
+.presentation_services:hover {
+    color: white;
+}
+
+.presentation_services>div {
+    width: 35%;
+    height: 45%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#protocoles {
+    background-image: url(./../image/accueil/services/protocoles_base.png);
+}
+
+.presentation_services:hover #protocoles {
+    background-image: url(./../image/accueil/services/protocoles_blanc.png);
+}
+
+#devis {
+    background-image: url(./../image/accueil/services/devis_base.png);
+}
+
+.presentation_services:hover #devis {
+    background-image: url(./../image/accueil/services/devis_blanc.png);
+}
+
+#appel_offre {
+    background-image: url(./../image/accueil/services/appel_doffre_base.png);
+}
+
+.presentation_services:hover #appel_offre {
+    background-image: url(./../image/accueil/services/appel_doffre_blanc.png);
+}
+
+#que_faisons_nous {
+    background-image: url(./../image/accueil/services/que_faisons_nous_base.png);
+}
+
+.presentation_services:hover #que_faisons_nous {
+    background-image: url(./../image/accueil/services/que_faisons_nous_blanc.png);
+}
+
+
+
+/* Actualites */
+
+.actualites {
+    background-color: #EEEEFF;
+    height: 75vh;
+}
+
+.actualites>.titre {
+    margin-top: 0vh;
+}
+
+.les_articles {
+    width: 100vw;
+    height: 63vh;
+    display: flex;
+    justify-content: center;
+}
+
+.article {
+    width: 20vw;
+    height: auto;
+    padding: 1vw;
+    background-color: #B0C4DE;
+    border: #B0C4DE solid;
+    border-radius: 25px;
+    margin: 2vh 2vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article>img {
+    width: 100%;
+}
+
+.article>p {
+    text-align: left;
+}
+
+.article>a {
+    display: flow-root;
+    height: 4vh;
+    font-size: 3vh;
+    color: #B0C4DE;
+    background-color: white;
+    border: white solid;
+    border-radius: 25px;
+
+    transition: 1s;
+}
+
+.article>img {
+    border-radius: 25px;
+}
+
+.article>a:hover {
+    font-size: 3.2vh;
+}
+
+.en_haut {
+    margin-top: 5vh;
+    margin-bottom: -5px;
+}
+
+#en_bas {
+    transform: rotate(180deg);
+}
+
+.vague {
+    width: 100vw;
+}
+
+
+/* DIRECTIONS */
+
+#map {
+    z-index: 1;
+    margin: auto;
+
+    height: 70vh;
+    width: 80vw;
+    background-color: rgba(50, 46, 47, 0.8);
+
+    margin: 2vh auto 10vh auto;
+    padding-top: 2.5vh;
+}
+
+#map iframe {
+    width: 95%;
+    height: 95%;
+    cursor: grabbing
+}
+
+.les_boutons_info {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto 10vw;
+    justify-content: center;
+}
+
+.bouton_info {
+    width: 14vw;
+    height: 10vh;
+    padding: 1vh 0.5vw;
+    background-color: #B0C4DE;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 2vh 1vw;
+
+
+}
+
+.bouton_info .titre {
+    font-weight: bold;
+}
+
+.bouton_info:hover {
+    background-color: rgba(50, 46, 47, 0.8);
+}
+
+.bouton_info>p {
+    display: none;
+    text-align: left;
+    margin-left: 10%;
+}
+
+
+/* Domaine */
+.domaine {
+    background-color: #EEEEFF;
+    width: auto;
+    height: 40vh;
+}
+
+.partenaires {
+    width: 100vw;
+    height: 22vh;
+    margin: 1vh 0vw;
+    background-color: white;
+    border: 3px solid white;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    justify-content: space-around;
+}
+
+.partenaires>a {
+
+    transition: 300ms;
+}
+
+
+
+.partenaires>a>img {
+    height: 18vh;
+    margin: 2vh 1vw;
+}
+
+
+/* Galerie */
+.galerie {
+    margin-left: 7vw;
+
+}
+
+.galerie>h2 {
+    text-align: left;
+    width: fit-content;
+    border-radius: 25px;
+    padding: 1vh 2vw;
+    background-color: #B0C4DE;
+}
+
+.galerie>div {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+}
+
+.galerie h3 {
+    width: 19vw;
+}
+
+.galerie img {
+    width: 13vw;
+    height: auto;
+    border: solid black;
+    border-radius: 10px;
+}
+
+
+.galerie video {
+    width: 17vw;
+    height: 20vh;
+    border: solid black;
+}
+
+
 
 a.bouton_services {
     border-radius: 50%;
@@ -120,6 +514,38 @@ a.bouton_services:hover::before {
 
 
 
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 0.8em;
+    }
+}
 
+@media screen and (max-width: 1050px) {
+    body {
+        font-size: 0.7em;
+    }
+}
 
-@media screen and (max-width: 450px) {}
+@media screen and (max-width: 870px) {
+    body {
+        font-size: 0.6em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        font-size: 0.4em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        font-size: 0.2em;
+    }
+}

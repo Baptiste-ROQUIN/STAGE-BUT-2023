@@ -1,0 +1,16 @@
+{
+  "width": 172,
+  "height": 406,
+  "cx": [
+    [ "DOMAINE", 86 ],
+    [ "NEWS", 86 ],
+    [ "DIRECTIONS", 86 ]
+  ],
+  "cy": [
+    [ "DOMAINE", 60 ],
+    [ "NEWS", 195 ],
+    [ "DIRECTIONS", 338 ]
+  ],
+  "shift": [],
+  "ratio": []
+}

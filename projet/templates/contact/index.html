@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/common_sous_page.css">
+</head>
+
+<body>
+    <section class="intro">
+        <img src="./../../assets/image/agence/image_vector.png" alt="">
+    </section>
+
+    <main id="contact">
+        <form action="" class="sous_conteneur_sans_animation">
+            <div>
+                <label for="">Nom :        </label>
+                <input type="text" name="" id="" placeholder="jean" required>
+            </div>
+
+            <div>
+                <label for="">Vous etes :      </label>
+                <select name="statut" id="statut-select" required>
+                    <option value="etudiant">Etudiant(e)</option>
+                    <option value="presta">Prestataire</option>
+                    <option value="autre">Autre</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Email :        </label>
+                <input type="email" name="" id="" placeholder="jean@gmail.com" required>
+            </div>
+            <div>
+                <label for="">Message :         </label>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Bonjour..." required></textarea>
+            </div>
+
+
+            <input type="submit" value="Envoyer">
+        </form>
+
+
+        <section id="info_utile">
+                <div>
+                    <h3>Adresse</h3>
+                    <p>40 Avenue Mohammedi clairbois – Bir Mourad Rais – Alger</p>
+                </div>
+
+                <div>
+                    <h3>Contact</h3>
+                    <p>
+                        +213 (0) 23 54 04 70 <br>
+                        +213 (0) 23 54 04 30 <br>
+                        Email : <a href="mailto:anrh@anrh.dz">anrh@anrh.dz</a> / <a href="mailto:contact@anrh.dz">contact@anrh.dz</a>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Nos horaires</h3>
+                    <p>DIMANCHE-JEUDI 09:00 - 16:00</p>
+                </div>
+
+                <div id="reseaux_sociaux">
+                    <h3>Suivez nous</h3>
+                    <a href="https://www.facebook.com/ANRH.cc/" target="_blank"> <img src="./../../assets/image/contact/facebook.png"
+                            alt="logo facebook"></a>
+
+                    <a href="https://www.youtube.com/channel/UCNylPg0coYoiuk8zb5H4Ipw" target="_blank"> <img src="./../../assets/image/contact/youtube.png"
+                            alt="logo youtube"></a>
+
+                </div>
+        </section>
+    </main>
+
+
+    <style>
+        #contact {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            height: 50vh;
+            width: 25vw;
+            justify-content: space-around;
+            margin: auto 5vw;
+        }
+
+        form>div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input[type=text] {
+            width: 8vw;
+        }
+
+        form input[type=email] {
+            width: 90%;
+        }
+
+        form select,
+        input[type=submit] {
+            width: max-content;
+            padding: 1vh 1vw;
+            cursor: pointer;
+        }
+
+        form input,
+        select {
+            padding: 2%;
+            border-radius: 15px;
+        }
+
+
+        #info_utile {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 40vw;
+        }
+        #info_utile>div {
+            width: 49%;
+        }
+
+        #reseaux_sociaux img {
+            width: 4vw;
+            height: 8vh;
+        }
+        
+        #reseaux_sociaux>a>img:hover {
+            width: 5vw;
+            height: 9vh;
+        }
+    </style>
+</body>
+
+</html>
